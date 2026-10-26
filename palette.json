@@ -1,0 +1,12 @@
+{
+  "name": "Ardiment",
+  "version": "0.7",
+  "ink": "#050b14",
+  "surface": "#0b1825",
+  "primary": "#52e8ff",
+  "primaryOnLight": "#006c85",
+  "secondary": "#b7a7ff",
+  "accent": "#e9b58a",
+  "paper": "#f3f5fa",
+  "text": "#f3f6ff"
+}
