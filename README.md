@@ -26,7 +26,7 @@
 </div>
 
 > [!IMPORTANT]
-> **ASCEND is now Ardiment.** The name is final. Version 0.7 introduced the identity and interface update; 0.7.1.1 removes a redundant appearance-settings entry. Existing work, progression, and account workflows continue under the new name.
+> **Ardiment was ASCEND before.** The name is final. Version 0.7 introduced the identity and interface update; 0.7.1.1 removes a redundant appearance-settings entry. Existing work, progression, and account workflows continue under the new name.
 
 > [!NOTE]
 > This repository is a **product and engineering showcase**. It documents Ardiment 0.7.1.1; the older source snapshot included in this repository is historical and does not represent the complete current app. Updating these showcase files does not deploy the application. See [repository scope](docs/REPOSITORY.md).
