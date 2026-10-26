@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+<title id="title">Ardiment — Your next step, connected to the bigger picture.</title><desc id="desc">Formerly ASCEND. Final name, familiar character. Private beta 0.7.1.1. Full control, Guided, and Autopilot over the same workspace.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0d1e30"/><stop offset="1" stop-color="#050b14"/></linearGradient><linearGradient id="edge"><stop stop-color="#52e8ff"/><stop offset="1" stop-color="#9477ff"/></linearGradient></defs>
+<rect x="1" y="1" width="1278" height="638" rx="28" fill="url(#bg)" stroke="#263c50"/>
+<g fill="none" stroke="#15283b" opacity=".8"><path d="M820 110V500"/><path d="M860 110V500"/><path d="M900 110V500"/><path d="M940 110V500"/><path d="M980 110V500"/><path d="M1020 110V500"/><path d="M1060 110V500"/><path d="M1100 110V500"/><path d="M1140 110V500"/><path d="M1180 110V500"/><path d="M1220 110V500"/><path d="M800 140H1230"/><path d="M800 180H1230"/><path d="M800 220H1230"/><path d="M800 260H1230"/><path d="M800 300H1230"/><path d="M800 340H1230"/><path d="M800 380H1230"/><path d="M800 420H1230"/><path d="M800 460H1230"/><path d="M800 500H1230"/></g>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<path d="M48 46H92" stroke="#52e8ff" stroke-width="3"/><text x="108" y="51" fill="#9cb4c9" font-size="12" letter-spacing="2.2">PERSONAL EXECUTION WORKSPACE</text>
+<rect x="1034" y="30" width="198" height="35" rx="17" fill="#15263d" stroke="#3c4265"/><text x="1133" y="52" text-anchor="middle" fill="#b7a7ff" font-size="12" font-weight="bold">PRIVATE BETA 0.7.1.1</text>
+<text x="47" y="186" fill="#f2f7ff" font-size="100" font-weight="bold" letter-spacing="-4">Ardiment</text>
+<text x="51" y="224" fill="#b7a7ff" font-size="15">Formerly ASCEND. Final name. Familiar character.</text>
+<text x="48" y="319" fill="#f2f7ff" font-size="43" font-weight="bold" letter-spacing="-1">Your next step,</text>
+<text x="48" y="377" fill="#52e8ff" font-size="39" font-weight="bold" letter-spacing="-1">connected to the bigger picture.</text>
+<text x="51" y="419" fill="#a5bbce" font-size="19">Tasks. Study. Projects. Routines. Progress.</text>
+<rect x="50" y="468" width="166" height="40" rx="10" fill="#12253a" stroke="#38556f"/><text x="133" y="493" fill="#e4edf6" font-size="12" text-anchor="middle" font-weight="bold" letter-spacing="1">FULL CONTROL</text>
+<rect x="230" y="468" width="117" height="40" rx="10" fill="#171c32" stroke="#554877"/><text x="288.5" y="493" fill="#b7a7ff" font-size="12" text-anchor="middle" font-weight="bold" letter-spacing="1">GUIDED</text>
+<rect x="361" y="468" width="139" height="40" rx="10" fill="#0b2937" stroke="#286177"/><text x="430.5" y="493" fill="#52e8ff" font-size="12" text-anchor="middle" font-weight="bold" letter-spacing="1">AUTOPILOT</text>
+<path d="M49 555H1231" stroke="#263c50"/><text x="50" y="598" fill="#b7c7d7" font-size="13" font-weight="bold" letter-spacing="1.4">YOUR WORK. YOUR SYSTEM. YOUR PROGRESSION.</text><text x="1230" y="598" text-anchor="end" fill="#a2b6cb" font-size="12">ENGLISH + ARABIC / INSTALLABLE PWA</text>
+</g>
+<g transform="translate(1000 297)" fill="none"><circle r="176" stroke="#243c57" stroke-dasharray="3 9"/><circle r="148" stroke="#354365"/><circle r="127" stroke="#142b40"/><path d="M0 -129 105 53 0 129 -105 53Z" fill="#0b1c2c" stroke="#52e8ff" stroke-width="7" stroke-linejoin="round"/><path d="M0 -87 62.3 42 0 80 -62.3 42Z" fill="#1c203e" stroke="#9477ff" stroke-width="6" stroke-linejoin="round"/><circle cy="10" r="28" fill="#52e8ff" stroke="none"/></g>
+<circle cx="1176.00" cy="297.00" r="5" fill="#b7a7ff"/>
+</svg>
