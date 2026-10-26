@@ -1,66 +1,62 @@
-# Add this showcase to GitHub
+# Publish the Ardiment showcase
 
-This kit updates the repository presentation. It does not update or deploy the ASCEND application.
+This kit updates the presentation of the existing repository. It does **not** deploy the app or upload its complete current private source.
 
-## Files to upload
+## Required files
 
-Copy the included `README.md` into the repository root and upload the included `docs/assets` folder at that exact path. Both are needed: the README refers to the local graphics through relative paths.
+Upload the **contents** of this kit into the repository root:
 
-Keep the SVG/GIF filenames unchanged. Merge the assets folder with an existing `docs` folder rather than replacing unrelated documentation.
+- `README.md`
+- `docs/` with its supplied `assets/`, `media/`, `brand/`, and reference documents
+- `UPLOAD.md`, `UPLOAD-AR.md`, and `REPOSITORY-SETTINGS.md` for maintainer instructions
 
-The banner uses a small animated GIF with stationary text. `hero.svg` is a static alternative: replace `docs/assets/hero.gif` with `docs/assets/hero.svg` in the README if a still banner is preferred.
+The README depends on relative asset/document paths. Do not upload only the README, rename asset files, or place the entire kit inside an extra parent folder. Merge the supplied `docs` contents with the existing folder; retain unrelated files and historical source.
 
-The mode and workspace illustrations include narrower variants selected through the supported HTML `picture` element. Essential information also remains in the ordinary README text.
+No `.env`, account data, recovery files, passwords, provider keys, or complete current app source belong in this showcase upload.
 
-## Through the GitHub website
+## Through GitHub in a browser
 
-1. Open the existing repository.
-2. Choose **Add file → Upload files**.
-3. Upload `README.md` and the included `docs` folder. Do not upload the ZIP itself as the replacement README.
-4. Keep `UPLOAD.md` only if you want these instructions in the repository; it is not required by the main page.
-5. Preview the README and commit the presentation update.
+1. Open the existing repository root: <https://github.com/HassanAsali/ASCEND>.
+2. Select **Add file → Upload files**.
+3. Drag in the extracted kit's root files and `docs` folder, preserving their paths. Upload the extracted files, not the ZIP itself.
+4. Check the file paths in the upload list. `README.md` must be at the root and the banner must be under `docs/assets/`.
+5. Commit with a message such as `Rebrand showcase to Ardiment 0.7.1.1`.
+6. Open the rendered README and check the banner, mobile/desktop images, collapsible sections, diagrams, and document links.
 
-## Through a local checkout
+GitHub's documented browser limit is 100 files per upload and 25 MiB per file. This kit is kept below those limits. If the browser upload workflow is inconvenient, use an existing local checkout instead.
 
-After copying this kit's README and graphics into the existing repository, review the staged files before committing:
+## Through an existing local checkout
+
+Copy the kit's files into your already configured local repository, then review only these paths:
 
 ```bash
-git add README.md docs/assets/
+git status --short
+git add README.md UPLOAD.md UPLOAD-AR.md REPOSITORY-SETTINGS.md docs/
 git diff --cached --stat
-git commit -m "Refresh ASCEND private beta showcase"
+git diff --cached --name-only
+git commit -m "Rebrand showcase to Ardiment 0.7.1.1"
 git push
 ```
 
-Use these commands inside the already configured repository. Do not copy private application configuration or account files into the public showcase.
+Inspect the staged file list before committing. Existing unrelated modifications inside `docs/` should not be accidentally included.
 
-## Add real product screenshots later
+## Finish the repository presentation
 
-The current graphics are original presentation illustrations, not screenshots of the running product. The README contains hidden comments with suggested screenshot placements. Once real images exist, put them in `docs/media`, then replace the corresponding comment with its Markdown image line.
+Use [REPOSITORY-SETTINGS.md](REPOSITORY-SETTINGS.md) for the proposed About text, website, topics, and social preview. The repository name is controlled separately in GitHub Settings. A README heading does not change the repository URL.
 
-| Filename | Capture |
-| --- | --- |
-| `ascend-command.png` | Full control Command with the identity strip and capture area. |
-| `ascend-quests.png` | Several compact tasks and one expanded task showing real steps. |
-| `ascend-focus.png` | A real unfinished step in the Focus space. |
-| `ascend-study.png` | A selected course and its academic tasks. |
-| `ascend-projects.png` | Required project work and its final objective. |
-| `ascend-life-systems.png` | Routines and explicitly recorded measures. |
-| `ascend-calendar.png` | Several tasks arranged on different dates. |
-| `ascend-progress.png` | Levels, ranks, skills, and recorded activity. |
-| `ascend-autopilot.png` | One primary next action. |
-| `ascend-friends.png` | Optional social view using fictitious demo identities. |
+If a GitHub-connected deployment exists, check its deployment rules before committing; adding showcase files can still trigger configured automation even though this kit contains no runtime changes.
 
-Direct screen captures with demo content work best. Leave email addresses, private invitation/request links, credentials, recovery material, and personal task information out of the public images.
+## Evidence and image handling
 
-## Compatibility notes
+The README's product captures are actual 0.7 app UI with synthetic content, clearly labeled as fixture captures. Do not replace them with private user/account screenshots without redaction. The known Cloudflare overlap is documented without publishing the user's screenshot.
 
-The page uses repository-relative images, badges, native collapsed sections, and Mermaid code fences. GitHub sanitizes custom HTML/CSS, so the visual treatment lives in local image assets rather than a scripted README.
+The banner has a static PNG fallback for reduced motion. SVG sources, local images, native details sections, relative links, and Mermaid keep the page compatible with GitHub's supported rendering. Custom CSS/JavaScript is not required. Final GitHub rendering must be checked after upload.
 
-The preview was checked locally; the repository's own rendered README should be checked after upload. Mermaid rendering and badge delivery are provided by GitHub and the badge service, respectively. Badges and the verification illustration report a recorded release; they are not a live CI feed or security certification.
+## Official references
 
-References:
-
-- [GitHub: basic Markdown, images, and alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [GitHub: collapsed sections](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)
-- [GitHub: Mermaid diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
-- [GitHub Markup: HTML sanitization](https://github.com/github/markup)
+- [Adding files to a repository](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository)
+- [About READMEs and relative links](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+- [Creating Mermaid diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
+- [Collapsed sections](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)
+- [Social media preview](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview)
+- [Renaming a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)

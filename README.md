@@ -1,729 +1,326 @@
-[README.md](https://github.com/user-attachments/files/33292421/README.md)
 <div align="center">
 
-# ASCEND // Personal Progression
+# Ardiment
 
-<img src="docs/assets/hero.gif" width="100%" alt="ASCEND: plan with intention, start with a clear next step. Private beta 0.6.5.5.3. Working name.">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/hero.png">
+  <img src="docs/assets/hero.gif" width="100%" alt="Ardiment. Your next step, connected to the bigger picture. Private beta 0.7.1.1. Formerly ASCEND.">
+</picture>
 
 ### Your work. Your system. Your progression.
 
-**A personal execution workspace that connects tasks, study, projects, and routines with progress earned through completed work.**
+**A personal execution workspace for tasks, study, projects, routines, and the next useful action.**
 
-![Version](https://img.shields.io/badge/Private_Beta-0.6.5.5.3-45DDF4?style=for-the-badge&labelColor=0B1723)
-![Platform](https://img.shields.io/badge/Platform-Progressive_Web_App-45DDF4?style=for-the-badge&labelColor=0B1723)
-![Stack](https://img.shields.io/badge/Stack-JavaScript_%7C_Node.js_%7C_Supabase-B59AFF?style=for-the-badge&labelColor=0B1723)
-![Languages](https://img.shields.io/badge/Interface-English_%7C_Arabic-66E2B0?style=for-the-badge&labelColor=0B1723)
+![Version](https://img.shields.io/badge/Private_Beta-0.7.1.1-52E8FF?style=flat-square&labelColor=0B1825)
+![Platform](https://img.shields.io/badge/Platform-Installable_PWA-9477FF?style=flat-square&labelColor=0B1825)
+![Languages](https://img.shields.io/badge/Interface-English_%2B_Arabic-52E8FF?style=flat-square&labelColor=0B1825)
+![Stage](https://img.shields.io/badge/Release-Local_checks_passed-B7A7FF?style=flat-square&labelColor=0B1825)
 
-**Plan what matters. Find a useful next step. Keep a record of the work you finish.**
+**Plan when you want control. Begin when you need a clear next step.**
 
-<sub>Private beta · Working name · Built through use and iteration</sub>
+[Open Ardiment](https://ardiment-beta-nine.vercel.app) · [What changed](#from-ascend-to-ardiment) · [The experience](#three-experiences-one-workspace) · [Engineering](#engineering-architecture) · [Verification](#verification)
 
-**[Explore the experience](#three-experiences-one-workspace) · [See the workspaces](#product-workspaces) · [Inspect the engineering](#engineering-architecture) · [Read the evidence](#verification)**
+<sub>Created and directed by <a href="https://github.com/HassanAsali">Hassan Asali</a> · AI-assisted development · Private beta</sub>
 
 </div>
 
+> [!IMPORTANT]
+> **ASCEND is now Ardiment.** The name is final. Version 0.7 introduced the identity and interface update; 0.7.1.1 removes a redundant appearance-settings entry. Existing work, progression, and account workflows continue under the new name.
+
 > [!NOTE]
-> ASCEND is the project's **working name**, not a final brand. Its name and visual identity may evolve as the product matures.
+> This repository is a **product and engineering showcase**. It documents Ardiment 0.7.1.1; the older source snapshot included in this repository is historical and does not represent the complete current app. Updating these showcase files does not deploy the application. See [repository scope](docs/REPOSITORY.md).
 
----
+## Why Ardiment exists
 
-## Overview
+A task list can hold everything you need to do and still leave you unsure where to begin.
 
-ASCEND started as a personal experiment: could the progression systems that make games engaging also make real work feel more visible and connected?
+Ardiment connects organization with execution. Capture an idea, place it in its real context, open an unfinished step, and retain a record of the work you finish. Courses, projects, routines, and personal tasks share a workspace without losing their distinct purposes.
 
-The original loop was straightforward: describe a task, review its structure, complete the work, and earn progression. Using it every day exposed a harder problem. A system can contain every task and still leave its user wondering where to begin.
+Its progression layer makes completed work visible through XP, levels, ranks, and transferable skills. Those indicators describe activity recorded in the app; they are not credentials or a measure of a person's worth.
 
-The current private beta addresses both sides of that problem. It can be a workspace for someone who wants to organize their own day, or it can reduce the interface to one useful action for someone who wants help getting started.
-
-Tasks, courses, projects, and routines retain their own purposes. The interface changes with the user's preferred level of control; the underlying work does not split into separate systems.
-
-> [!TIP]
-> **Plan when you want control. Begin when you need a clear next step.**
-> ASCEND can help me plan, or help me decide the next useful action.
-
-This repository is a public showcase of the project. This document describes **private beta 0.6.5.5.3**; selected public code or older repository material should not be treated as the complete current application. The full application source, private configuration, and operational security material are outside the scope of this showcase.
-
-### At a glance
-
-| 🧭 Adaptive control | ⚡ Real execution | 🔐 Clear privacy boundaries |
+| Clarity | Continuity | Control |
 | :--- | :--- | :--- |
-| One action, a few choices, or a full dashboard. | Real unfinished steps and recorded completion. | Browser-encrypted progress with distinct local and shared-data scopes. |
+| A real next step, with enough context to begin. | The same task across lists, courses, calendar, and Focus. | A detailed dashboard, a few choices, or one action. |
 
-<details>
-<summary><strong>📍 Open the complete reading map</strong></summary>
+## From ASCEND to Ardiment
 
-### Explore
+The rebrand gives the existing product a consistent identity across its interface, installation experience, and communications. The familiar nested geometric emblem and cyan/violet character were retained and refined.
 
-- [Product principles](#product-principles)
-- [Three experiences, one workspace](#three-experiences-one-workspace)
-- [The execution loop](#the-execution-loop)
-- [Product workspaces](#product-workspaces)
-- [Progression and integrity](#progression-and-integrity)
-- [Engineering architecture](#engineering-architecture)
-- [Synchronization and continuity](#synchronization-and-continuity)
-- [Security and privacy](#security-and-privacy)
-- [Performance and interaction design](#performance-and-interaction-design)
-- [Verification](#verification)
-- [Development process and lessons](#development-process-and-lessons)
-
-
-</details>
-
----
-
-![01 — The experience: make the next step clear](docs/assets/product.svg)
-
-## Product principles
-
-ASCEND's features are organized around a few rules that remain consistent across the application.
-
-| Principle | What it means in practice |
+| Release | Delivered change |
 | --- | --- |
-| One source of truth | A task shown in Study, a calendar, or Focus refers to the same record. Switching views does not create another task. |
-| Execution earns progression | Completing eligible work can affect personal progression. Capturing, sorting, scheduling, opening a page, or starting a timer does not. |
-| Projects have a home | Large project containers stay in Projects. Daily recommendations can reference eligible project work without treating an entire project as the next action. |
-| Details are available on demand | A clear title and useful next step come first. Full steps, metadata, and advanced organization appear when opened. |
-| User control is adjustable | Full control, Guided, and Autopilot expose different amounts of information over the same workspace. |
-| Saving and syncing are distinct | Local persistence keeps work available on the current device; cloud acknowledgement determines what has actually reached the account. |
-| Privacy has explicit boundaries | Encrypted private progress, optional local protection, AI submissions, and intentionally shared collaboration data are described separately. |
+| **0.7** | Ardiment naming, refined emblem and wordmarks, installation assets, coordinated light/dark styling, and English/Arabic brand copy. |
+| **0.7** | Opaque full-viewport access gates that block interaction with the underlying workspace. |
+| **0.7** | More compact task/calendar presentation and action menus sized to their contents. |
+| **0.7** | **Complete all** for one task and its remaining steps, through the existing completion and reward rules. |
+| **0.7.1.1** | Removed the duplicate **Advanced layout** section; **Theme & colors** remains the appearance entry point. |
 
-The goal is an engaging interface that still respects the user's attention. Progression is feedback about recorded work, not a measurement of a person's worth.
+The app's broader structure remains familiar: tasks, Study, Projects, Focus, Life Systems, progression, and optional collaboration. No new database migration was required for these releases.
+
+Compatibility-sensitive names such as `ascend.*`, `ASCEND1`, and stable application identifiers remain where changing them could break saved data, encrypted recovery, or installations. They are internal compatibility details, not current product branding. [Read the rebrand and continuity notes →](docs/REBRAND.md)
+
+## Inside the current interface
+
+<img src="docs/media/ardiment-desktop-dark.jpg" width="100%" alt="Actual Ardiment desktop interface in dark mode with synthetic demonstration tasks.">
+
+<table>
+  <tr>
+    <td width="68%" valign="top"><img src="docs/media/ardiment-calendar-ar-tablet.jpg" width="100%" alt="Arabic right-to-left tablet calendar with compact task tiles."><br><sub>Arabic tablet calendar · compact task presentation</sub></td>
+    <td width="32%" valign="top"><img src="docs/media/ardiment-phone-ar-light.jpg" width="100%" alt="Arabic phone interface in light mode."><br><sub>Arabic phone layout · light theme</sub></td>
+  </tr>
+</table>
+
+<sub>Actual 0.7 interface captures using synthetic data in an isolated browser fixture. These are not physical-device or production-account tests. The 0.7.1.1 patch only removes the duplicate appearance entry; these captures are not presented as new patch screenshots.</sub>
 
 ## Three experiences, one workspace
 
 <picture>
   <source media="(max-width: 640px)" srcset="docs/assets/experiences-mobile.svg">
-  <img src="docs/assets/experiences.svg" width="100%" alt="Full control, Guided, and Autopilot use the same tasks, projects, and earned history.">
+  <img src="docs/assets/experiences.svg" width="100%" alt="Full control, Guided, and Autopilot provide different amounts of structure over the same tasks and earned history.">
 </picture>
 
-Different people need different amounts of structure. The same person may also want a detailed workspace one day and a quiet starting point the next.
-
-ASCEND supports three experience modes without moving or duplicating tasks.
-
-| Experience | Home presentation | Best suited to |
+| Experience | What you see | When it helps |
 | --- | --- | --- |
-| **Full control** | A customizable Command dashboard with identity, capture, and optional information cards. | Users who want to plan, organize, and shape their workspace. |
-| **Guided** | Up to three recommended actions, each with a short reason. | Users who want a few choices without opening the entire backlog. |
-| **Autopilot** | One primary next action, with Start, completion, postponement, and details controls. | Users who want to open the app and begin. |
+| **Full control** | A customizable Command dashboard with capture and optional information cards. | Plan, organize, and shape the workspace yourself. |
+| **Guided** | Up to three suggested actions with short reasons. | Choose from a small set without opening the backlog. |
+| **Autopilot** | One primary action with access to Start, details, and scheduling controls. | Open the app and begin. |
 
-**Full control is the current default.** The quieter modes remain available at any time. The user's name, level, equipped title, and access to capture remain recognizable across the experiences.
+**Full control is the current default.** Changing modes changes presentation and recommendations over the same records. It does not create separate task stores or reset progress.
 
-Mode changes affect presentation and recommendation preferences. Existing task IDs, project links, earned rewards, and completed history remain intact.
+**Low Energy** uses an existing unfinished step or resource link, or asks for a concrete first step when the task lacks one. A brief start does not silently finish the objective or grant its full reward.
 
-### Low Energy
+## Capture → organize → start → complete
 
-Low Energy reduces the size of a starting action using information the task already contains. It can point to an unfinished step, offer a brief start on that step, open an existing resource link, or ask the user to write one concrete first step when there is insufficient information.
+1. **Capture:** type a task manually or submit a description for AI-assisted structure.
+2. **Review:** confirm the proposed work and its real steps before accepting it.
+3. **Organize:** connect it to a course, project, planned day, or appropriate list.
+4. **Start:** open the task or next unfinished step in Focus.
+5. **Complete:** record the actual work; eligible progression follows the task's rules.
+6. **Continue:** return to the remaining work or choose another useful action.
 
-It does not invent an assignment question or assume what a project needs. A brief start is also recorded differently from finishing a task: giving something a few minutes does not silently complete the whole objective or award its full reward.
+For example, **Heat Transfer Assignment** can contain individual questions. Study supplies the course context, the calendar shows the planned day, and Focus can present **Solve Question 2**. Finishing it updates the original assignment. If the whole assignment is already done, **Complete all** finishes that task's remaining steps together.
 
-<!-- Optional screenshot after capture: ![Autopilot showing one real next step](docs/media/ascend-autopilot.png) -->
-
-## The execution loop
-
-ASCEND is designed around a continuous path from an idea to completed work.
-
-1. **Capture.** Type a task directly or describe it for AI-assisted structuring.
-2. **Review.** Confirm the proposed task, its placement, and any suggested steps.
-3. **Organize.** Connect it to a course, project, planned day, or appropriate list.
-4. **Start.** Open a dedicated Focus space for the real task or unfinished step.
-5. **Complete.** Mark the actual work done; eligible progression follows the completion rules.
-6. **Continue.** Return to the remaining work or surface another useful next action.
-
-For example, a course task called **Heat Transfer Assignment** can contain separate questions. Study provides its course context, the calendar shows its planned date, and Focus can present **Solve Question 2**. Completing that step updates the original assignment rather than creating a completed copy in another section.
-
-<details>
-<summary><strong>🔎 Inside the deterministic next-action engine</strong></summary>
-
-### A deterministic next-action engine
-
-Choosing the next action does not require a fresh generative AI request. A local prioritization layer considers the existing schedule, task placement, deadlines, priorities, progress, and recent postponements.
-
-The engine first checks eligibility: is the work active, available, unfinished, in an appropriate location, and permitted by the user's project-focus preference? It then ranks eligible actions using a stable ordering.
-
-| Priority layer | Example |
-| --- | --- |
-| Relevant fixed commitment | A class about to start or a commitment scheduled now. |
-| Overdue or near deadline | An unfinished assignment that is due soon. |
-| Explicit Today work | A task deliberately planned for the current day. |
-| Scheduled routine | A daily action or routine currently available. |
-| Current study or general work | Ready work ordered using its priority and relevant metadata. |
-| Eligible project work | A real project task admitted by the user's settings or its own explicit schedule/deadline. |
-
-Ties resolve deterministically. Recent skips and temporary holds also influence what returns next. A short explanation such as **Due today**, **Planned for today**, or **Study priority** communicates the reason without exposing a scoring dashboard.
-
-Project focus is off by default. A genuine project task can still become eligible through its own real deadline or an explicit Today plan. A deadline inherited from the project container is not enough by itself to fill daily Focus with project work.
-
-The output is a **reference to existing work**, not a second task queue.
-
-```mermaid
-flowchart TB
-    Record["Canonical task and real steps"]
-    Record --> Quests["Quests view"]
-    Record --> Study["Course view"]
-    Record --> Calendar["Calendar view"]
-    Record --> Engine["Next-action projection"]
-    Engine --> Focus["Focus execution"]
-    Focus --> Completion["Complete the original step or task"]
-    Completion --> Record
-    classDef data fill:#132D40,stroke:#52E8FF,color:#EFF7FF,stroke-width:2px
-    classDef view fill:#20223B,stroke:#B59AFF,color:#EFF7FF
-    classDef done fill:#12392D,stroke:#66E2B0,color:#EFF7FF
-    class Record data
-    class Quests,Study,Calendar,Engine,Focus view
-    class Completion done
-```
-
-</details>
-
-
----
+> **Complete all applies to one task and its steps.** It does not mark the entire task list complete. Already-earned step rewards are preserved; locked project finals and future daily occurrences remain protected.
 
 ## Product workspaces
 
 <picture>
   <source media="(max-width: 640px)" srcset="docs/assets/workspace-map-mobile.svg">
-  <img src="docs/assets/workspace-map.svg" width="100%" alt="A visual map of ASCEND capabilities: Command, Quests, Study, Focus, Projects, Life Systems, Calendar, social coordination, and Progress.">
+  <img src="docs/assets/workspace-map.svg" width="100%" alt="Command, Quests, Study, Focus, Projects, Life Systems, calendar, Friends and Circles, and Progress.">
 </picture>
 
-**Choose a workspace below. Open its details when you want the full explanation.**
-
-### Command Center
-
-Command is the entry point rather than another storage system. It brings together identity, capture, useful actions, and optional information.
-
-In Full control, users can arrange the dashboard, change card sizes, hide secondary cards, and adjust the amount of information shown. In Guided or Autopilot, the action area becomes simpler while familiar identity and capture controls remain accessible.
-
-The presentation aims to make the next decision obvious: start something, capture something, or deliberately open a more detailed workspace.
-
-<!-- Optional screenshot after capture: ![Command Center in Full control](docs/media/ascend-command.png) -->
-
-### Quests
-
-Quests is the main execution-oriented task workspace. Today, Upcoming, All, and saved work provide distinct ways to find tasks; search and secondary filters support more detailed exploration.
-
-The current card design combines individually framed surfaces with a compact execution flow:
-
-- A clear title and a small deadline or scheduling cue.
-- Relevant course and effort context.
-- One genuine unfinished step when available.
-- A visible Start action and an optional reward badge.
-- Expandable details, real step progress, and existing edit, planning, and deletion actions.
-
-Multiple tasks stay compact. Opening a card reveals more without forcing every neighboring task to expand. A single task can use a larger presentation, and task groups can be collapsed independently.
-
-Opening or closing details is a presentation action. It does not modify the task, earn XP, or create cloud work merely because the user looked at more information.
-
-<!-- Optional screenshot after capture: ![Compact quest cards with one task expanded](docs/media/ascend-quests.png) -->
-
-### Task calendar
-
-Quests includes an alternative calendar presentation over the same records. Sequential dates are organized in a four-column layout with compact task cards, date navigation, and a separate place for undated work.
+| Workspace | Purpose | Established behavior |
+| --- | --- | --- |
+| **Command** | Capture work and choose a useful action. | Three experience modes; optional dashboard cards and layout preferences. |
+| **Quests** | Find and execute tasks. | Today, Upcoming, All, saved work, search, compact cards, and expandable details. |
+| **Calendar** | View the same tasks by date. | Four-column date layout, compact tiles, undated work, and controlled scheduling. |
+| **Study** | Keep academic work in context. | Semesters, courses, weekly timetable, study units, course notes, and linked tasks. |
+| **Focus** | Work on one real task or step. | Completion criteria, optional timing, pause/resume, parked thoughts, and continuity. |
+| **Projects** | Structure larger outcomes. | Required/optional quests, substeps, reviewed AI breakdowns, and gated final objectives. |
+| **Life Systems** | Record routines and personal measures. | Manual check-ins, bounded history, explicit links, and supported one-event Undo. |
+| **Progress** | Keep completed work visible. | XP, levels, ranks, transferable skills, titles, and activity history. |
+| **Friends & Circles** | Coordinate intentionally shared work. | Optional social information and collaboration with separate contribution rules. |
+| **System** | Manage account, privacy, and preferences. | Appearance, recovery/backups, sharing, notifications, help, and version details. |
 
 <details>
-<summary><strong>📅 Scheduling, dragging, and date integrity</strong></summary>
+<summary><strong>Task cards, calendar, and Focus</strong></summary>
 
-Eligible tasks can be rescheduled through desktop dragging, a touch grip, or date/time controls. Planned dates and real deadlines remain separate concepts. A planned-day move should not quietly rewrite the deadline; the date role determines what the action changes.
+Cards lead with a title, useful context, an unfinished step, and a clear action. Additional steps and metadata open on demand. Calendar tiles use a denser presentation so several tasks on one day remain manageable; selecting a title opens the existing details and controls.
 
-Calendar cards open the existing task details and retain edit and deletion controls. Recorded completion dates and daily recurrence have separate protections; not every card is freely movable.
+Planned dates and real deadlines are distinct. Rescheduling an eligible planned day does not quietly rewrite a deadline. Daily occurrences and completed history retain their own restrictions.
 
-<!-- Optional screenshot after capture: ![Quests calendar with compact dated cards](docs/media/ascend-calendar.png) -->
+Focus refers to the canonical task or step. It has no separate task database. Starting a timer earns no XP; parked thoughts and session timing remain device-local. Reconciliation can account for a step completed elsewhere without discarding the session's parked notes.
 
 </details>
 
-### Study Center
-
-Study owns the academic context: semesters, courses, class schedules, study units, and course-related tasks. The weekly timetable belongs here instead of being maintained as an unrelated duplicate elsewhere.
-
 <details>
-<summary><strong>📚 Courses, class schedules, and study methods</strong></summary>
+<summary><strong>Projects, routines, and collaboration</strong></summary>
 
-Each course can retain its own notes and study method. Task filtering makes it possible to work on a particular subject without scanning unrelated purchases, personal ideas, or project containers.
+Projects keep large outcomes separate from daily work. Project tasks are off in general Focus recommendations by default, but an eligible task with its own explicit Today plan or real deadline can still appear. A project container is not treated as a single actionable step.
 
-User-facing time controls use a 12-hour presentation. Schedule information and commitments can inform recommendations while remaining planning data; attending to a timetable is not automatically treated as rewarded task completion.
+Life Systems check-ins and measures are records, not sources of personal quest XP. Friends use compact level/rank presentation rather than publishing raw XP in the current interface. Sharing remains an explicit preference.
 
-<!-- Optional screenshot after capture: ![Study Center with a selected course and its tasks](docs/media/ascend-study.png) -->
+Focus Circles and social collaboration are intentionally shared data scopes. They do not grant personal quest XP for coordination alone.
+
+The encrypted external request portal lets someone propose work through an owner-created link. Proposals remain outside Quests until the owner reviews and accepts them. Receiving a request never completes a task or grants rewards.
 
 </details>
 
-### Focus space
-
-Focus turns a selected task into an execution environment. It shows the real action and what counts as done, with access to the task's remaining steps and resource link when present.
-
-The user can pause, resume, switch tasks, or continue to the next step. Timing is optional. A parking area holds stray thoughts so they can be noted without replacing the work currently in view, and a session summary shows what was actually completed.
-
-Starting a session, leaving it, or reaching the end of a timer never earns progression by itself. Focus holds a pointer to the original task or step; it has no independent task database.
-
-Session timing and parked thoughts remain device-local rather than entering synced progress, ordinary progress backups, AI requests, or social information. If another device completes the selected step, Focus can reconcile against the current task while keeping the session's parked notes available.
-
-<!-- Optional screenshot after capture: ![Focus space for one unfinished step](docs/media/ascend-focus.png) -->
-
-### Projects
-
-Projects gives larger outcomes their own structure. A project can contain required and optional quests, real substeps, and a final objective whose availability depends on the required work.
-
 <details>
-<summary><strong>🧩 Structure, dependencies, and project integrity</strong></summary>
+<summary><strong>English, Arabic, appearance, and motion</strong></summary>
 
-The AI Project Architect can propose a breakdown, but the user reviews and adjusts it before it becomes accepted work. Project organization does not replace the progression rules applied to its real quests.
+The interface supports English and Arabic, including RTL layouts. The name stays **Ardiment** in both languages; authored task text remains as written. A device's explicit per-account language choice stays stable during background sync, while the synced profile can seed a new device.
 
-```mermaid
-flowchart TB
-    Project["Project outcome"]
-    Project --> Required["Required quests"]
-    Project --> Optional["Optional quests"]
-    Required --> Steps["Executable substeps"]
-    Required --> Final["Final objective unlock"]
-    classDef project fill:#332A1B,stroke:#FFCE83,color:#FFF5E5
-    classDef work fill:#132D40,stroke:#52E8FF,color:#EFF7FF
-    classDef final fill:#12392D,stroke:#66E2B0,color:#EFF7FF
-    class Project project
-    class Required,Optional,Steps work
-    class Final final
-```
+Theme & colors exposes appearance customization without a duplicate Advanced layout entry. Light/dark styling, typography, cards, icons, and feedback use the same visual system. Arabic-compatible system font fallbacks avoid a required remote font download.
 
-Project tasks keep their canonical IDs and project links when referenced elsewhere. Existing earned progress also constrains rebuilding a project map, helping prevent a planning edit from silently replacing completed work.
-
-<!-- Optional screenshot after capture: ![Project workspace with required work and final objective](docs/media/ascend-projects.png) -->
+Motion preferences and system reduced-motion settings are respected. Transitions communicate opening, navigation, or completion; the rebrand did not add another perpetual rendering loop. Notification and celebration durations are adjustable.
 
 </details>
 
-### Life Systems
+[See the current feature reference →](docs/FEATURES.md)
 
-Life Systems brings routines, personal measures, workout logs, and reviews into a connected workspace. The previous standalone Habits experience is now presented as routines within this area.
+## Progression with rules
 
-<details>
-<summary><strong>🌿 Routines, measures, and real recorded history</strong></summary>
-
-The relationships are explicit: a routine may belong to a life system and may optionally link to a measure. Checking in does not fabricate a measurement. If a value needs recording, the user records it.
-
-Examples include a water routine with manual repeated check-ins, a sleep measure, an exercise log with sets/reps/load, or a weekly review of a chosen system.
-
-Recorded history uses real dates. Missing measurement days remain missing rather than becoming zero. Routine summaries count scheduled days, and manual repeated check-ins remain available independently of reminder timing. Undoing the last repeated check-in removes that event rather than erasing the whole day.
-
-Routines, measures, and reviews do not award personal XP simply for being logged.
-
-<!-- Optional screenshot after capture: ![Life Systems with routines and recorded measures](docs/media/ascend-life-systems.png) -->
-
-</details>
-
-### Friends and Focus Circles
-
-Social features support coordination without turning other people into another source of personal progression.
-
-<details>
-<summary><strong>🤝 Private connections and shared contribution</strong></summary>
-
-**Friends** supports private invitations, request review, blocking/removal, and shared plans with each person's own completion state. The compact progress presentation emphasizes names, levels, and ranks; raw XP is not displayed in the Friends workspace. Optional shared progress depends on the relevant sharing choice.
-
-**Focus Circles** supports membership-based group coordination, shared sessions or work items, and a separate contribution system. Circle contributions remain distinct from personal quest progression.
-
-The social layer is intentionally shared information between authorized participants. It should not be confused with the private encrypted progression vault. Friendship, joining a circle, or completing a shared social plan does not clear another person's personal tasks or grant personal XP.
-
-<!-- Optional screenshot after capture: ![Friends using fictitious demo identities](docs/media/ascend-friends.png) -->
-
-</details>
-
-### Request portal
-
-An owner-controlled shareable link lets someone outside ASCEND propose work or a meeting without creating an account. Incoming requests are encrypted in the sender's browser and enter a review inbox for the owner.
-
-<details>
-<summary><strong>📨 Receiving and reviewing proposed work</strong></summary>
-
-Receiving a request is not acceptance. A proposal cannot automatically become a quest, change personal progress, or grant rewards. The owner reviews it and decides whether it belongs in the workspace.
-
-Link management remains separate from account access. Encryption protects the submitted content; it does not make a stranger's request trustworthy.
-
-</details>
-
-### Workspace customization
-
-Customization is available without making every user configure a dashboard before using it.
-
-<details>
-<summary><strong>🎛️ Appearance, layout, information, and feedback</strong></summary>
-
-| Area | Available control |
+| Interaction | Personal progression |
 | --- | --- |
-| Appearance | Theme presets, accent/background/card colors, font, text scale, spacing, and roundness. |
-| Command layout | Card order, visibility, size, and supported layout editing. |
-| Navigation | Optional destinations and ordering, with core entry points retained. |
-| Experience | Full control, Guided, Autopilot, and Low Energy. |
-| Information | Task reward visibility, gamification level, optional counters, and analytics. |
-| Feedback | Notification and celebration duration, pause, and dismissal. |
-| Motion | Motion preferences and support for system reduced-motion settings. |
-| Language | English or Arabic interface with the user's authored content kept as written. |
+| Finish an eligible quest or rewarded step | Applied through the task's completion rules. |
+| Complete all remaining steps of one task | Uses the same completion path and remaining rewards. |
+| Capture, sort, edit, or schedule | No completion reward for organization itself. |
+| Start a timer or record a brief start | No automatic full-task reward. |
+| Check in to a routine or record a measure | No personal quest XP. |
+| Coordinate through Friends or Circles | No personal quest XP; circle rules are separate. |
 
-Basic preferences are direct controls. Deeper organization is placed behind advanced layout options. Desktop settings keep navigation and the relevant content area usable without requiring the whole application shell to scroll away.
+Repeated completion must not create repeated rewards. Daily quests use date-aware occurrences: finishing today preserves its history and creates the next occurrence, which remains locked until its date. Project final objectives remain gated by required work.
 
-</details>
+Contextual Undo supports eligible edits, moves, and deletions while respecting newer changes and earned progress. Drafts preserve unfinished capture and AI-console text locally, scoped to the active identity; they are not automatically analyzed or included in ordinary synced progress/backups.
 
-### English and Arabic
-
-Interface language and authored content are different concerns. A user can choose an English interface and still write Arabic tasks, or choose Arabic while keeping English course names and notes.
-
-<details>
-<summary><strong>🌐 Language, direction, and authored content</strong></summary>
-
-The application translates its own controls and explanatory copy, supports right-to-left layout, and formats durations and dates through localization utilities. Authored task text is preserved rather than rewritten during rendering.
-
-An explicit per-account device language choice stays stable during background synchronization. A synced profile preference can seed a new device without unexpectedly changing the interface of an open workspace.
-
-</details>
-
----
-
-## Progression and integrity
-
-The RPG layer remains part of ASCEND, but it is connected to recorded execution rather than every interaction.
-
-| Action | Personal progression |
-| --- | --- |
-| Complete an eligible quest or rewarded step | Applied according to the task's reward rules. |
-| Complete eligible project work | Applied through its real linked quests. |
-| Capture, edit, organize, or schedule work | No completion reward for the organization itself. |
-| Check in to a routine or record a measure | No personal XP. |
-| Start a Focus session or finish a timer | No personal XP. |
-| Record a brief Low Energy start | Does not award the full task reward. |
-| Participate in Friends collaboration | No personal quest XP. |
-| Contribute to a Focus Circle | Separate circle contribution rules; no personal rank farming. |
-
-### Levels, ranks, and skills
-
-XP supports level progression, while ranks also consider a broader record of completed work and active execution. Transferable skill allocations describe the capabilities practiced by eligible completed work rather than merely repeating the task's category.
-
-These are app-defined indicators of recorded activity, not credentials or an objective assessment of real-world ability.
-
-The standalone Guide and Milestones destinations from earlier public descriptions have been retired. Progress history, levels, ranks, skills, and equipped titles remain part of the current product.
-
-### Reward consistency
-
-Completion and its earned reward are treated as related data. The application preserves reviewed reward information, records earned progress, and reconciles completion history when device state changes.
-
-This matters in cases such as repeated clicks, daily recurrence, editing a task after partial completion, project restructuring, or two devices completing the same work. A UI change must not create a new reward source simply because the same task appears on another screen.
-
-### Daily work and safe Undo
-
-Daily quests use date-aware occurrences and retain their earned history. A future occurrence is not available merely because the previous day was completed.
-
-Contextual Undo supports eligible edits, scheduling moves, and deletions using the same record. It respects newer changes and earned progress instead of restoring an old full-workspace snapshot over current work. Daily completion has its own constrained reversal behavior.
-
-Drafts also preserve unfinished manual capture and AI-console input locally. They are scoped to the current identity, are not automatically analyzed on restoration, and remain outside ordinary cloud progress and backups.
-
-<!-- Optional screenshot after capture: ![Progress view with levels, ranks, and recorded activity](docs/media/ascend-progress.png) -->
-
----
-
-![02 — The engineering: many views, one source of truth](docs/assets/engineering.svg)
+The standalone **Guide** and **Milestones** destinations from earlier versions are retired. Useful next-action assistance and progression history remain integrated into the current workspaces.
 
 ## Engineering architecture
 
-ASCEND is a browser application built with HTML, CSS, and vanilla JavaScript, backed by Node.js and Supabase. It is installable as a Progressive Web App and deployable through a shared server handler adapted for serverless hosting.
+![Many views. One source of truth.](docs/assets/engineering.svg)
 
-The architecture retains the existing application rather than adding a new task system for each feature. Pure domain modules handle calculations and validation; workspace modules connect those rules to rendering and interaction.
+Ardiment is a responsive browser PWA built with **HTML, CSS, vanilla JavaScript, Node.js, and Supabase/PostgreSQL**, with optional **Google Gemini** integration. The current application uses a shared service handler adapted for Node/serverless hosting.
+
+```mermaid
+flowchart TD
+    Work["Canonical work and earned history"]
+    Work --> Views["Quests, Study, calendar, Projects"]
+    Work --> Next["Deterministic next-action engine"]
+    Next --> Focus["Focus on a real task or step"]
+    Views --> Focus
+    Focus --> Completion["Validated completion and rewards"]
+    Completion --> Work
+```
 
 | Layer | Responsibility |
 | --- | --- |
-| Browser interface | Responsive workspaces, task cards, dialogs, capture, localization, and interaction feedback. |
-| Domain logic | Task routing, next-action selection, recurrence, scheduling, habits, skills, and state reconciliation. |
-| Local persistence | Account-scoped state, pending synchronization, drafts, device-local sessions, and optional encrypted storage. |
-| Client cryptography | Private-state encryption/decryption, recovery operations, and protected backup handling. |
-| Node.js service layer | Authenticated server operations, AI-provider access, validation, and selected collaboration/request features. |
-| Supabase | Authentication, PostgreSQL persistence, and database access controls. |
-| PWA shell | Installation metadata, cached application resources, and service-worker update behavior. |
+| Interface/workspace modules | Rendering, capture, navigation, dialogs, localization, and feedback. |
+| Domain modules | Routing, eligibility, recurrence, skills, scheduling, and reconciliation. |
+| Scoped local persistence | Account/Guest separation, cached state, drafts, and pending changes. |
+| Browser cryptography | Private progress, recovery, optional local protection, and encrypted backups. |
+| Node service layer | Validated authenticated operations, provider access, requests, and optional services. |
+| Supabase | Authentication, database persistence, and authorization policies. |
+| PWA shell | Installation metadata, cached resources, and service-worker updates. |
 
-### High-level boundaries
+### AI proposes; the user reviews
 
-```mermaid
-flowchart TB
-    subgraph Device["Trusted user device"]
-        UI["Responsive PWA interface"]
-        Domain["Shared domain logic and task state"]
-        Local["Scoped local persistence"]
-        Crypto["Browser cryptography"]
-        UI --> Domain
-        Domain --> Local
-        Domain <--> Crypto
-    end
-    Crypto <--> Cloud["Authenticated encrypted progress storage"]
-    UI --> Service["Validated application services"]
-    Service --> Shared["Authorized shared collaboration data"]
-    Service --> AI["Configured semantic AI provider"]
-    classDef client fill:#132D40,stroke:#52E8FF,color:#EFF7FF
-    classDef secure fill:#12392D,stroke:#66E2B0,color:#EFF7FF
-    classDef service fill:#20223B,stroke:#B59AFF,color:#EFF7FF
-    class UI,Domain,Local client
-    class Crypto,Cloud secure
-    class Service,Shared,AI service
-```
+Gemini can structure submitted task descriptions and suggest project breakdowns. Manual capture remains available. Local assessment is a deterministic fallback, not an on-device language model equivalent to Gemini.
 
-The encrypted progress path and the intentionally shared service paths have different data scopes. AI receives content submitted for analysis; it does not need the complete private workspace to decide every next action.
+The next-action engine uses existing task data and local prioritization; it does not need a fresh generative request to choose every action. Eligibility is checked before ordering work by commitments, deadlines, explicit plans, routines, priority, and supported project context.
 
-### Canonical records and projections
+Provider keys stay server-side. Supported private/local analysis settings prevent submission to the external semantic provider; the app's own server may still process requests. Submitted AI content is a separate data path from encrypted cloud progress.
 
-Quests hold their identity, authored content, placement, scheduling information, real steps, status, and earned history. A project links to its work, a course links academic context, and the calendar reads the relevant date fields.
+### Local-first saving and guarded sync
 
-The next-action engine produces a projection of that state. Focus stores the selected record reference and device-local session information. UI-only disclosure state controls what is expanded without entering the progression data model.
+Local saving and cloud acknowledgement represent different facts. The synchronization layer retains pending work, compares local/remote state against an acknowledged base, and uses conditional writes to avoid blindly replacing concurrent device edits.
 
-This separation supports a useful invariant:
-
-> Changing how work is displayed must not change what the work is.
-
-### AI-assisted structure with user review
-
-Google Gemini provides semantic analysis for natural-language input, including task structuring and project breakdown suggestions. Optional browser speech recognition can supply a transcript as ordinary task input where supported.
-
-The AI layer proposes structure. Local rules and validated application logic govern placement, completion, and progression. The user reviews generated work before accepting it.
-
-Manual capture remains available. Local assessment is a deterministic fallback, not an on-device model with the same semantic capabilities as Gemini. Private local processing avoids sending supported analysis content to the external provider; it trades some semantic depth for that boundary.
-
-Provider credentials stay server-side. AI requests use constrained context and validated outputs, while asynchronous responses remain tied to the account and operation that requested them.
-
----
-
-## Synchronization and continuity
-
-Cross-device synchronization became one of the project's most demanding engineering areas. Two devices can each hold valid new work, and uploading the latest full snapshot without reconciliation can discard one of them.
-
-ASCEND therefore separates local persistence, pending changes, acknowledged cloud state, and presentation status.
-
-### Local-first saving
-
-Edits are saved through the existing local persistence path before background cloud reconciliation. With optional Privacy lock enabled, the adapter coalesces protected writes into encrypted IndexedDB transactions and keeps pending/error state explicit.
-
-Opening an available account cache does not require every secondary service to complete first. Cloud verification and reconciliation can proceed in the background while respecting recovery and account-verification requirements.
-
-Guest data remains separate from authenticated account data. An unavailable or locked account must not be treated as an empty replacement profile ready to overwrite existing progress.
-
-### Three-way reconciliation
-
-The synchronization layer compares a last-acknowledged base with current local and remote state. Independent changes can merge, while overlapping changes follow field-level reconciliation rules and preserve alternatives where applicable.
-
-Writes are conditional on the remote version. If another device changes the account first, the client refreshes and retries rather than blindly replacing the row. Completion data and reward history receive related handling so reconciliation does not combine incompatible halves of a clear or reversal.
-
-This is a guarded state-reconciliation design, not a claim that every possible concurrent edit is conflict-free.
-
-### Keeping synchronization light
-
-The coordinator coalesces rapid edits, serializes work, retains pending trailing changes, and retries temporary failures with bounded backoff. Foreground lifecycle events help resume work after reconnection or returning to the app.
-
-Verified unchanged checks can use remote revision information and reusable account-bound data. They avoid unnecessary full payload processing, encryption, and writes. Stable normalization prevents representation-only differences from repeatedly creating new cloud work.
-
-### Honest status
+The coordinator coalesces rapid changes, serializes reconciliation, retries temporary failures, and avoids unchanged work where possible. Account and operation-generation checks reject stale asynchronous results after a switch or cancellation.
 
 | Status | Meaning |
 | --- | --- |
-| **Saved on this device** | Local work is retained; the relevant cloud update has not yet been acknowledged. |
-| **Syncing** | Reconciliation is actively in progress. |
-| **Cloud updated** | An uploaded snapshot was acknowledged, while newer changes may still be pending. |
-| **Up to date** | The current reconciliation pass has settled against its acknowledged state. |
-| **Connection or recovery action needed** | The app explains an actual obstacle instead of pretending the account is synchronized. |
+| **Saved on this device** | Work is retained locally; the relevant cloud update is not yet acknowledged. |
+| **Syncing** | Reconciliation is in progress. |
+| **Cloud updated** | A snapshot was acknowledged; newer changes may still be queued. |
+| **Up to date** | Current reconciliation has settled against acknowledged state. |
+| **Recovery/action needed** | Access or synchronization requires attention. |
 
-An acknowledged upload and a fully settled queue are not identical. The interface should communicate that distinction without turning normal background work into a misleading red failure.
+Offline use depends on an available cached shell, accessible saved data, and the relevant unlock state. Sign-in, first-time cloud restoration, and server services still require connectivity. Reconciliation protects tested concurrent cases; it is not a claim that every possible conflict is automatically resolved.
 
-### Upgrade continuity
+## Privacy that explains its boundaries
 
-Application-shell updates are tested separately from task changes. Existing IDs, completed work, reward history, projects, routines, measures, preferences, and pending account information must survive a release.
+![Protect data. Explain the scope.](docs/assets/privacy.svg)
 
-Presentation-only changes are kept outside persisted task state where practical. This allows the interface to improve without rewriting the user's history.
-
----
-
-![03 — The boundaries: protect data and explain the scope](docs/assets/privacy.svg)
-
-## Security and privacy
-
-The public description focuses on security boundaries and protections rather than private deployment details. Cryptography is one part of the design; authorization, lifecycle handling, recovery, and safe rendering are also necessary.
-
-### Protection by data type
-
-| Data or operation | Protection and scope |
+| Data scope | Protection or boundary |
 | --- | --- |
-| Private synced progress | Encrypted in the browser with AES-GCM before cloud storage; authenticated access and per-user database policies provide a separate authorization boundary. |
-| Optional local Privacy lock | Password-based key derivation and authenticated encryption protect supported saved application records on that browser, with manual/inactivity locking and a separate recovery flow. |
-| Password-protected backup | A portable encrypted data copy, validated before confirmed restoration. The export password is separate from the sign-in password. |
-| Incoming external request | Client-side message encryption with public-key wrapping; owner review is required before accepting work. |
-| Account and asynchronous operations | Scope checks prevent stale results from crossing account changes or reopening canceled operations. |
-| AI analysis | Explicit submitted content and constrained context; provider secrets remain on the server and local processing remains available. |
-| Friends and Circles | Authorized shared collaboration information, separate from the private encrypted progression vault. |
-| Rendered or imported content | Validation, safe text rendering, constrained URLs, and defensive server handling reduce the risks of untrusted input. |
-
-### Account boundaries
-
-Guest and signed-in users use separate local scopes. Pending analyses, open editors, decrypted request content, and account-specific asynchronous operations are reset or invalidated when identity changes.
-
-Cancellation is treated as a lifecycle event. A delayed response from an old dialog or account should not commit simply because its network request eventually finishes.
+| **Private synced progress** | Browser-side AES-GCM before cloud upload, with authenticated access and per-user database policies. |
+| **Optional local Privacy lock** | Encrypted saved application records in that browser, separate password/recovery, and manual/inactivity locking. |
+| **Encrypted backup** | A portable data copy protected by its own export password and validated before confirmed restore. |
+| **Incoming request content** | Client-side content encryption and public-key wrapping, followed by owner review. |
+| **AI submissions** | Explicit submitted content and constrained context; external-provider consent is distinct from sync encryption. |
+| **Friends/Circles and service metadata** | Authorized shared scopes, not the private encrypted progression vault. |
 
 ### Recovery is not a backup
 
-These mechanisms have different jobs:
+**The account password signs you in. The Cloud Recovery File unlocks your encrypted progress. A backup contains a separate copy of your data.** Optional local Privacy lock has its own password and Local Recovery File.
 
-- **Account sign-in** authenticates the user.
-- **Cloud recovery material** unlocks encrypted progress on a trusted new device.
-- **Local Privacy lock credentials** protect this browser's saved records when that optional feature is enabled.
-- **A backup file** contains a separate copy of the data; an encrypted backup has its own password.
+An old Cloud Recovery File can remain valid if it belongs to the same account vault. It is not a dated snapshot of tasks. The `ASCEND1.` recovery prefix remains intentional after the rebrand. Changing the app's domain creates a separate browser-storage origin, so a new origin may ask for recovery even on a previously used device.
 
-Recovery credentials and backup passwords are not interchangeable. Losing all required recovery material can make encrypted data unavailable even when sign-in succeeds.
+[Read the recovery and domain-change guide →](docs/RECOVERY.md)
 
-### Important boundaries
+Local encryption protects saved data while locked. It cannot protect an unlocked page from malicious code executing in that page, a compromised device, or a malicious future application build. Not every service record is end-to-end encrypted.
 
-Local encryption is optional and protects saved data while locked. It does not protect information from malicious code executing inside an already unlocked application, from a compromised operating system, or from someone with control of an unlocked trusted device.
-
-Task text intentionally submitted to an AI provider is distinct from encrypted cloud storage. Social collaboration and relevant service metadata also have their own scopes; this project does not claim that every application record is end-to-end encrypted.
-
-The browser application also depends on the integrity of the code delivered to it. Client-side encryption should not be described as protection against a malicious future build controlled by the application operator.
-
-**ASCEND remains a private beta and has not undergone an independent professional security audit.** Local regression tests provide evidence for tested behavior, not a guarantee that the product has no vulnerabilities.
-
----
-
-## Performance and interaction design
-
-An execution tool should not become another source of friction. Performance work addresses both unnecessary processing and unnecessary decisions.
-
-### Rendering and background work
-
-Visible workspaces receive targeted rendering instead of every hidden section being rebuilt for each interaction. Request coordination coalesces repeated reads and unchanged publication, and synchronization skips expensive processing when acknowledged data is unchanged.
-
-Task cards use compact presentation and progressive disclosure instead of displaying every step and field at once. View preferences, presentation state, and task state have different lifetimes.
-
-### Motion with a purpose
-
-The interface uses geometric icon motion, short card transitions, disclosure feedback, and completion effects. Animation communicates navigation, expansion, or a completed action rather than continuously competing with the work.
-
-System reduced-motion preferences and application motion settings are respected. Ambient effects pause when the application is hidden or unfocused, and the current task-card redesign adds no idle animation loop or extra background job.
-
-Notifications and celebrations have adjustable durations and can be paused or dismissed. Feedback should stay readable long enough to understand what happened.
-
-### Responsive behavior
-
-Desktop, tablet, and phone layouts share the same domain logic. Cards, actions, dialog layouts, enlarged text, and right-to-left content are checked at multiple viewport sizes.
-
-The mobile dock uses a stable five-slot structure with capture in the center. Desktop settings use a contained content area, while small screens reveal settings sections through a simpler navigation pattern.
-
-Keyboard disclosure, clear focus states, and appropriately sized primary touch controls are included in interaction checks. These improvements are not a claim of complete accessibility certification.
-
----
-
-![04 — The evidence: verify what changed](docs/assets/proof.svg)
+**Ardiment remains a private beta without an independent professional security audit.** Tests document specific behavior; they are not a security certification.
 
 ## Verification
 
-![Recorded local results: 23 automated suites, 441 browser checks, and a 2,000-task load scenario. Not live CI.](docs/assets/verification.svg)
+<img src="docs/assets/verification.svg" width="100%" alt="0.7.1.1: 24 automated suites passed. 0.7: sampled English/Arabic interface QA. Live device and production acceptance remain separate.">
 
-The current release has a recorded local verification report dated **2026-10-09**. The results below belong to **0.6.5.5.3** rather than an unspecified future build.
-
-| Verification area | Recorded result |
+| Evidence | Version and scope |
 | --- | --- |
-| Automated Node.js suites | All **23** suites in the main test command passed. |
-| JavaScript parsing | All **97** checked browser/server/test modules parsed. |
-| Browser regression checks | **441** checks passed across seven executed suites. |
-| State-load benchmark | Existing **2,000-task / 10,000-step** scenario passed. |
-| Unchanged-sync behavior | Tested path performed no encryption, writes, commits, normalization, or reward scans. |
-| Upgrade continuity | Same-origin service-worker upgrade from **0.6.5.5.2** to **0.6.5.5.3** preserved tested data. |
+| **24 suites in `npm test` passed** | 0.7.1.1 full static, unit, crypto, and mocked-service regression command. |
+| **Changed JavaScript syntax checked** | 0.7.1.1 appearance-settings patch. |
+| **Complete-all regressions** | Partial completion, repeated activation, remaining XP, protected finals, future daily tasks, recurrence, and unrelated data preservation. |
+| **Installation/cache checks** | Stable manifest identity, Ardiment display names, versioned shell, and offline asset aliases. |
+| **Sampled actual-interface QA** | 0.7: English desktop at 1280px; Arabic tablet at 820px; Arabic light-mode phone at 375px, using synthetic browser-fixture data. |
+| **Access and task interaction checks** | 0.7: viewport-sized restore gate, inert background, compact calendar/menu samples, and real keyboard activation of Complete all. |
+
+The 0.7 interface captures and observations remain evidence for that release. The small 0.7.1.1 patch was checked through the regression suite and source/syntax review; a fresh physical-device/browser acceptance pass was not performed for it.
+
+**Not established by these checks:** live Supabase account/policy behavior, real cross-device sync after a domain change, physical iPhone/iPad Safari installation, background push delivery, live AI requests, production FPS, complete accessibility, or independent security assurance. Historical 0.6.x benchmark/browser totals are not presented as current-release results.
+
+[Verification details →](docs/VERIFICATION.md)
+
+## Known issues and next validation
+
+| Item | Current status |
+| --- | --- |
+| **Login bot-verification overlap** | User-reported on iPad and desktop: the Cloudflare widget overlaps security-check copy. Recorded for a later fix; **not fixed in 0.7.1.1**. |
+| **Physical-device installation and offline updates** | Further acceptance testing required, including icon/name refresh behavior. |
+| **Background reminders** | Depend on server setup, scheduling, device support, and per-device permission; real delivery requires device testing. |
+| **Live account and sync acceptance** | Separate from mocked regression results; verify in the owner's deployment. |
+
+[Tracked issues and acceptance criteria →](docs/KNOWN-ISSUES.md)
+
+## Built through use and iteration
+
+Ardiment is an **AI-assisted development project**. AI tools produce much of the implementation code. I define the product behavior, priorities, constraints, and expected outcomes, use the app myself, review results, and iterate when the implementation misses the intended experience.
+
+The recurring challenges are concrete: several views must refer to the same work; concurrent edits must preserve earned history; canceled operations must not commit later; recovery must be understandable; and a visually rich interface must remain usable on a tablet or phone.
+
+The working process is to define a behavior, exercise it, reproduce failures, make a targeted change, and check what must survive. The rebrand follows the same principle: evolve the product's identity while preserving the work people already recorded.
+
+## Project reference
+
+| Reference | Contents |
+| --- | --- |
+| [Features](docs/FEATURES.md) | Implemented capabilities, retained decisions, and setup-dependent behavior. |
+| [Rebrand](docs/REBRAND.md) | ASCEND → Ardiment, compatibility exceptions, and domain continuity. |
+| [Release notes](docs/RELEASES.md) | 0.6.5.5.3 baseline, 0.7 rebrand, and 0.7.1.1 refinement. |
+| [Brand](docs/BRAND.md) | Naming, colors, typography, logo usage, and editable assets. |
+| [Recovery](docs/RECOVERY.md) | Passwords, files, backups, and the retained recovery prefix. |
+| [Verification](docs/VERIFICATION.md) | What was checked and what remains unverified. |
+| [Known issues](docs/KNOWN-ISSUES.md) | Open layout issue and pending acceptance areas. |
+| [Repository scope](docs/REPOSITORY.md) | Current documentation versus historical public source and images. |
 
 <details>
-<summary><strong>🧪 Open all seven browser suites and test limitations</strong></summary>
+<summary><strong>Maintainer: publishing this showcase</strong></summary>
 
-### Browser coverage by concern
+Upload the root `README.md` and the accompanying `docs` folder together, preserving relative paths. The kit includes current illustrations, actual synthetic-data interface captures, editable brand assets, and English/Arabic upload instructions.
 
-| Suite area | Passed checks | Examples |
-| --- | ---: | --- |
-| Current task cards and modes | 104 | Disclosure, calendar actions, real progress, reward visibility, shared data across modes, responsive layouts, and reduced motion. |
-| Folding, routines, and Friends | 150 | Closed-section clipping, water check-ins and Undo, sharing choices, level/rank presentation, and workspace bounds. |
-| Execution and workspace flow | 41 | Study, Focus, Life Systems, request links, notification Off, and mobile navigation. |
-| Encrypted synchronization | 67 | Account isolation, stable normalization, concurrent edits, conditional writes, and accurate statuses. |
-| Untrusted text rendering | 47 | Task, step, social, request, error, and status text across English/Arabic views. |
-| Quest calendar | 24 | Scheduling, date/time roles, touch cleanup, preferences, details, edit, and deletion. |
-| Release upgrade | 8 | Persistent task identity, completed history, progression, linked work, preferences, and subsequent edits. |
+The existing historical source folder is not a current-release installation package. This documentation kit does not change application runtime files, deployment settings, authentication configuration, or repository visibility/license settings.
 
-The responsive task-card scenarios include widths from **320 to 1440 pixels**, both interface languages, and enlarged text. Browser suites run in headless Chromium on Linux with synthetic data. Controlled cloud/service responses are used while real browser encryption and reconciliation logic execute.
-
-### What this evidence does not establish
-
-These tests do not substitute for live database-policy verification, real push delivery, physical iPad/Safari testing, production-hosting checks, or frame-performance measurements on actual devices. They also do not constitute a penetration test or a professional security audit.
-
-The distinction matters: a repeatable regression test can demonstrate that a specific failure is fixed without proving that every related behavior is perfect.
+See [upload instructions](UPLOAD.md), [Arabic instructions](UPLOAD-AR.md), and [suggested repository metadata](REPOSITORY-SETTINGS.md). No domain, account, or repository name is changed by adding these files.
 
 </details>
 
-
 ---
 
-![05 — The journey: built through use and iteration](docs/assets/evolution.svg)
-
-## Evolution of the product
-
-The older public description documented a system with a task board, a standalone Planner and Habits area, a Guide, and Milestones. Daily use changed the information architecture and the engineering behind it.
-
-| Earlier direction | Current private beta |
-| --- | --- |
-| One dense Command dashboard | Three optional experience modes over the same workspace. |
-| Planning and academic information distributed across sections | Study owns the semester/course/timetable context; saved lists retain their separate purpose. |
-| Habits as another isolated destination | Routines linked explicitly with Life Systems, measures, and reviews. |
-| Large task cards displaying most information immediately | Individually framed compact cards with a real next step and expandable details. |
-| Focus as a task label or recommendation | An execution space with completion criteria, optional timing, parked thoughts, and session continuity. |
-| List-oriented task browsing | List and calendar presentations with shared records and controlled date moves. |
-| Cloud encryption as the primary privacy feature | Distinct cloud protection, optional local Privacy lock, encrypted backups, recovery, and lifecycle guards. |
-| A growing number of navigation concepts | Redundant Guide/Milestones destinations retired; useful progression and task capabilities retained. |
-
-The latest card release is a deliberate synthesis: the clearer individual framing of an earlier design combined with the compact next-step interaction of the current system. It changes presentation without restoring outdated persistence, routing, or security behavior.
-
-## Development process and lessons
-
-ASCEND is an **AI-assisted development project**. AI tools produce much of the implementation code. I define the product behavior, priorities, constraints, and expected outcomes, use the application myself, review the results, and iterate when the implementation fails the intended experience. Automated tests provide another check on those iterations.
-
-The workflow is continuous: define a concrete behavior, build it, exercise real interactions, reproduce failures, make a targeted change, and verify that existing behavior survives.
-
-<details>
-<summary><strong>🛠️ Engineering challenges and lessons from iteration</strong></summary>
-
-### What the project demanded
-
-| Engineering challenge | Lesson |
-| --- | --- |
-| Multiple views of the same work | Presentation should project canonical data instead of creating competing task stores. |
-| Concurrent device editing | The latest timestamp alone cannot express every independent change or protect earned history. |
-| Rewards and recurrence | Completion, dates, and earned rewards need consistent rules across clicks, edits, and devices. |
-| Account changes during asynchronous work | Identity and cancellation belong in the operation lifecycle, not only in the sign-in screen. |
-| Encryption and recovery | Data protection is incomplete if normal users cannot understand the difference between sign-in, unlocking, and backup. |
-| Feature growth | More controls do not automatically produce a more usable product; execution and detailed planning need different presentations. |
-| Arabic and English support | Interface translation, authored text, date formatting, direction, and stable preferences are separate problems. |
-| Visual refinement | Attractive cards still need readable titles, reachable actions, predictable disclosure, and a reasonable processing cost. |
-| AI-generated implementation | Fast code generation still needs defined invariants, skeptical review, and regression evidence. |
-
-The most useful progress came from resolving interactions between features, not simply adding another destination to the sidebar.
-
-</details>
-
-## Status and next areas of validation
-
-**Current documented version:** `0.6.5.5.3`  
-**Stage:** Private beta  
-**Project name:** ASCEND — temporary working name  
-**Implementation:** Browser PWA, JavaScript, Node.js, Supabase/PostgreSQL, Google Gemini integration  
-**Public scope:** Product and engineering showcase; selected material rather than the complete private application
-
-The current phase emphasizes real use, continuity, clarity, and targeted refinement. Further validation can expand physical-device coverage, real push and cloud-policy testing, accessibility evaluation, and independent security review. These are validation priorities, not claims that the work is already complete.
-
-Branding and public presentation can evolve without treating existing user data as disposable. The intent is to mature the product while preserving the work people have already recorded.
-
----
-
-![ASCEND closing statement](docs/assets/footer.svg)
+<img src="docs/assets/footer.svg" width="100%" alt="Ardiment. Your work. Your system. Your progression. Private beta 0.7.1.1.">
 
 <div align="center">
 
-### ASCEND
+**One workspace. A useful next step. Progress that stays connected.**
 
-**Your work. Your system. Your progression.**
-
-*A place to plan when you want control, and begin when you need a clear next step.*
-
-`0.6.5.5.3 · PRIVATE BETA · WORKING NAME`
+[Back to top ↑](#ardiment)
 
 </div>
-
-[↑ Back to the top](#ascend--personal-progression)
-
-<!-- Maintainer: upload docs/assets together with this README. See UPLOAD.md for packaging and screenshot placement. The graphics are product illustrations, not screenshots or a live CI dashboard. -->
