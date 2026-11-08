@@ -6,42 +6,74 @@
 
 ### Your work. Your system. Your progression.
 
-**A personal execution workspace for tasks, study, projects, routines, and the next useful action.**
+**A place for everything you need to do—and a clearer way to actually do it.**
+
+Tasks. Study. Projects. Daily routines. One connected workspace.
 
 ![Version](https://img.shields.io/badge/Private_Beta-0.8.4.2-52E8FF?style=flat-square&labelColor=0B1825)
 ![Platform](https://img.shields.io/badge/Platform-Installable_PWA-9477FF?style=flat-square&labelColor=0B1825)
 ![Languages](https://img.shields.io/badge/Interface-English_%2B_Arabic-52E8FF?style=flat-square&labelColor=0B1825)
-![Stage](https://img.shields.io/badge/Release-Local_checks_passed-B7A7FF?style=flat-square&labelColor=0B1825)
 
-**Plan when you want control. Begin when you need a clear next step.**
+**See what matters today. Know what is coming. Make your progress count.**
 
-[Open Ardiment](https://ardiment-beta-nine.vercel.app) · [What’s new](#whats-new-in-0842) · [The experience](#three-experiences-one-workspace) · [Continuity](#built-for-continuity) · [Verification](#verification)
+[See the workspace](#see-the-workspace) · [What’s new](#whats-new-in-0842) · [The experience](#three-experiences-one-workspace) · [Continuity](#built-for-continuity) · [Verification](#verification)
 
 <sub>Created and directed by <a href="https://github.com/HassanAsali">Hassan Asali</a> · AI-assisted development · Private beta</sub>
 
 </div>
 
-> [!IMPORTANT]
-> **Ardiment was previously known as ASCEND.** The name is final. Version 0.7 introduced the identity update. The 0.8 series adds conversational study planning, daily workload awareness and improved progression. **0.8.4.2** brings goal-aware study plans, whole-plan rewards and more reliable scheduling. Existing work, progression, and account workflows continue under the new name.
+## Why I’m building Ardiment
 
-> [!NOTE]
-> This repository is a **product and engineering showcase**, not the complete application source. This README describes the prepared **0.8.4.2 release package**. Updating this page does not deploy that package or establish which version is running at the app link. Supporting documents and media in this repository include historical 0.7 material; they are labeled as historical below.
+I wanted somewhere to put the things that actually fill my day: assignments, exams, projects, personal tasks and everything in between.
 
-## Why Ardiment exists
+But writing everything down is only the beginning. I still need to know what to work on today, how much time it might take, and whether I am leaving enough room for what comes next.
 
-A task list can hold everything you need to do and still leave you unsure where to begin.
+That is what I want Ardiment to do well.
 
-Ardiment connects organization with execution. Capture an idea, place it in its real context, open an unfinished step, and retain a record of the work you finish. Courses, projects, routines, and personal tasks share a workspace without losing their distinct purposes.
+**Give me a clear picture. Give me a useful next step. Let me see the work I have actually finished.**
 
-Its progression layer makes completed work visible through XP, levels, ranks, and transferable skills. Those indicators describe activity recorded in the app; they are not credentials or a measure of a person's worth.
+I use the app myself. When something feels confusing, looks crowded or gives an unrealistic picture of my day, it becomes something to improve. The aim is a workspace that feels calm and polished while handling real responsibilities.
 
-| Clarity | Continuity | Control |
-| :--- | :--- | :--- |
-| A real next step, with enough context to begin. | The same task across lists, courses, calendar, and Focus. | A detailed dashboard, a few choices, or one action. |
+Ardiment was previously known as **ASCEND**. The name changed; the work and progression stayed connected.
+
+## See the workspace
+
+### Your day, without losing the bigger picture
+
+<img src="docs/media/ardiment-0.8.4.2-command.jpg" width="100%" alt="Ardiment 0.8.4.2 Command Center showing a compact profile, today's workload ring and a seven-day outlook with synthetic demonstration data.">
+
+**Today has its own plan. The rest of the week has its own place.**
+
+Command brings your current work, upcoming commitments and progression together. The circular indicator describes recorded work against available time; the outlook helps you see what is approaching without treating the whole backlog as today's job.
+
+<sub>Actual 0.8.4.2 browser capture with synthetic demonstration data. The sample deliberately shows an over-capacity day; these are not a real user's tasks or a prediction of your workload.</sub>
+
+### A study plan you can actually work through
+
+<img src="docs/media/ardiment-0.8.4.2-study.jpg" width="100%" alt="Ardiment Study Studio with a Heat Transfer exam Boss Quest and a Thermodynamics regular-study Main Quest, distinct course accents and a conversational planning field.">
+
+**Tell it what you need to study. Keep the subject, the sessions and the progress connected.**
+
+An exam and a normal review session are different goals. Study Studio gives each a clear place, with subject accents, plan-level progress and access to the daily work. The example above shows an exam plan alongside regular revision.
+
+<sub>Actual 0.8.4.2 interface with synthetic plans. This browser demonstration is not evidence of a live Gemini request.</sub>
+
+<details>
+<summary><strong>Prefer a softer light theme? See the same workspace.</strong></summary>
+
+<img src="docs/media/ardiment-0.8.4.2-light.jpg" width="100%" alt="The same Ardiment Command Center in its muted light theme, with soft grey surfaces and restrained teal and violet accents.">
+
+Light mode keeps the same structure with muted surfaces and quieter contrast. The goal is a comfortable workspace, not a screen full of bright white panels.
+
+<sub>Actual 0.8.4.2 browser capture with synthetic demonstration data.</sub>
+
+</details>
+
+> **About this showcase:** This page presents the prepared **0.8.4.2** release. The repository is a public product showcase, not the complete current application source. Release checks and remaining validation are documented below.
 
 ## What's new in 0.8.4.2
 
-**Study for an exam. Review a chapter. Learn something normally. The plan should match the goal.**
+**An exam needs preparation. A quick review needs focus. The app should know the difference.**
 
 - **Two purposes:** exam preparation becomes one **Boss Quest** plan; ordinary learning, reading, practice or revision becomes a **Main Quest** plan.
 - **One subject at a time:** creating or rescheduling from a subject card affects that plan. A separate global action coordinates active plans.
@@ -140,24 +172,6 @@ The app's broader structure remains familiar: tasks, Study, Projects, Focus, Lif
 
 The rebrand preserves existing work and account continuity. Technical compatibility details are intentionally outside this public overview.
 
-## Earlier interface reference
-
-<details>
-<summary><strong>Historical 0.7 screenshots — not the 0.8.4.2 interface</strong></summary>
-
-<img src="docs/media/ardiment-desktop-dark.jpg" width="100%" alt="Actual Ardiment desktop interface in dark mode with synthetic demonstration tasks.">
-
-<table>
-  <tr>
-    <td width="68%" valign="top"><img src="docs/media/ardiment-calendar-ar-tablet.jpg" width="100%" alt="Arabic right-to-left tablet calendar with compact task tiles."><br><sub>Arabic tablet calendar · compact task presentation</sub></td>
-    <td width="32%" valign="top"><img src="docs/media/ardiment-phone-ar-light.jpg" width="100%" alt="Arabic phone interface in light mode."><br><sub>Arabic phone layout · light theme</sub></td>
-  </tr>
-</table>
-
-<sub>Actual 0.7 interface captures using synthetic data in an isolated browser fixture. These are not physical-device or production-account tests. The 0.7.1.1 patch only removes the duplicate appearance entry; these captures are not presented as new patch screenshots.</sub>
-
-</details>
-
 ## Three experiences, one workspace
 
 <picture>
@@ -175,7 +189,7 @@ The rebrand preserves existing work and account continuity. Technical compatibil
 
 **Low Energy** uses an existing unfinished step or resource link, or asks for a concrete first step when the task lacks one. A brief start does not silently finish the objective or grant its full reward.
 
-## Capture → organize → start → complete
+## From “I need to do this” to done
 
 1. **Capture:** type a task manually or submit a description for AI-assisted structure.
 2. **Review:** confirm the proposed work and its real steps before accepting it.
@@ -245,7 +259,7 @@ Motion preferences and system reduced-motion settings are respected. Transitions
 
 [Earlier feature reference (0.7 showcase) →](docs/FEATURES.md)
 
-## Progression with rules
+## Progress you can see
 
 | Interaction | Personal progression |
 | --- | --- |
@@ -288,7 +302,7 @@ Record completed work and return to the remaining plan. The Completed view provi
 
 If a task was completed by mistake, eligible reopening controls help correct the record. If the schedule changes, revisit the plan instead of pretending that the original dates still fit.
 
-## Four ways the workspace comes together
+## Different days. The same connected workspace.
 
 <details>
 <summary><strong>For a student managing several courses</strong></summary>
@@ -350,7 +364,7 @@ These features complement individual planning. They are not presented as a full 
 
 **Control over the workspace.** Section shortcuts and dashboard preferences let you choose what stays visible. You can keep a fuller overview or reduce the amount of information competing for attention.
 
-## Questions people may have
+## A few things worth knowing
 
 <details>
 <summary><strong>Is Ardiment only for students?</strong></summary>
@@ -480,13 +494,17 @@ The direction is a more complete mobile product while retaining the flexibility 
 
 Older issue documents describe the state of their original release. An issue’s absence from this README is not proof that every historical case has been retested.
 
-## Built through use and iteration
+## Built, used, questioned, improved
 
-Ardiment is an **AI-assisted development project**. AI tools produce much of the implementation code. I define the product behavior, priorities, constraints, and expected outcomes, use the app myself, review results, and iterate when the implementation misses the intended experience.
+I am **Hassan Asali**, a Mechanical Engineering student, and Ardiment is a product I am building around work I actually need to get done.
 
-The recurring challenges are concrete: several views must refer to the same work; concurrent edits must preserve earned history; canceled operations must not commit later; recovery must be understandable; and a visually rich interface must remain usable on a tablet or phone.
+I care about the details: a study session should say which subject it belongs to. A workload indicator should help me understand my day. A button should do something useful. The interface should feel good to use without getting in the way.
 
-The working process is to define a behavior, exercise it, reproduce failures, make a targeted change, and check what must survive. The rebrand follows the same principle: evolve the product's identity while preserving the work people already recorded.
+That is also how the app improves. I use it, notice what feels wrong, define the behavior I need and work through the next iteration. Some changes are visual. Others are about making the underlying experience more reliable.
+
+Development is **AI-assisted**. AI tools produce much of the implementation code; I direct the product, define priorities, review the results and test it through everyday use. This is an actively developing private beta, and the verification section separates local evidence from what still needs real-world testing.
+
+**The standard I’m working toward is simple: useful enough to rely on, clear enough to understand, and polished enough to enjoy opening.**
 
 ## About this showcase
 
@@ -502,7 +520,7 @@ The public description intentionally focuses on what people can do with Ardiment
 
 <div align="center">
 
-**One workspace. A useful next step. Progress that stays connected.**
+**Less scattered. More connected. One useful step at a time.**
 
 [Back to top ↑](#ardiment)
 
