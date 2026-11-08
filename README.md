@@ -2,33 +2,30 @@
 
 # Ardiment
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="docs/assets/hero.png">
-  <img src="docs/assets/hero.gif" width="100%" alt="Ardiment. Your next step, connected to the bigger picture. Private beta 0.7.1.1. Formerly ASCEND.">
-</picture>
+<img src="docs/brand/ardiment-mark.svg" width="88" alt="Ardiment emblem">
 
 ### Your work. Your system. Your progression.
 
 **A personal execution workspace for tasks, study, projects, routines, and the next useful action.**
 
-![Version](https://img.shields.io/badge/Private_Beta-0.7.1.1-52E8FF?style=flat-square&labelColor=0B1825)
+![Version](https://img.shields.io/badge/Private_Beta-0.8.4.2-52E8FF?style=flat-square&labelColor=0B1825)
 ![Platform](https://img.shields.io/badge/Platform-Installable_PWA-9477FF?style=flat-square&labelColor=0B1825)
 ![Languages](https://img.shields.io/badge/Interface-English_%2B_Arabic-52E8FF?style=flat-square&labelColor=0B1825)
 ![Stage](https://img.shields.io/badge/Release-Local_checks_passed-B7A7FF?style=flat-square&labelColor=0B1825)
 
 **Plan when you want control. Begin when you need a clear next step.**
 
-[Open Ardiment](https://ardiment-beta-nine.vercel.app) · [What changed](#from-ascend-to-ardiment) · [The experience](#three-experiences-one-workspace) · [Engineering](#engineering-architecture) · [Verification](#verification)
+[Open Ardiment](https://ardiment-beta-nine.vercel.app) · [What’s new](#whats-new-in-0842) · [The experience](#three-experiences-one-workspace) · [Continuity](#built-for-continuity) · [Verification](#verification)
 
 <sub>Created and directed by <a href="https://github.com/HassanAsali">Hassan Asali</a> · AI-assisted development · Private beta</sub>
 
 </div>
 
 > [!IMPORTANT]
-> **Ardiment was previously known as ASCEND.** The name is final. Version 0.7 introduced the identity and interface update; 0.7.1.1 removes a redundant appearance-settings entry. Existing work, progression, and account workflows continue under the new name.
+> **Ardiment was previously known as ASCEND.** The name is final. Version 0.7 introduced the identity update. The 0.8 series adds conversational study planning, daily workload awareness and improved progression. **0.8.4.2** brings goal-aware study plans, whole-plan rewards and more reliable scheduling. Existing work, progression, and account workflows continue under the new name.
 
 > [!NOTE]
-> This repository is a **product and engineering showcase**. It documents Ardiment 0.7.1.1; the older source snapshot included in this repository is historical and does not represent the complete current app. Updating these showcase files does not deploy the application. See [repository scope](docs/REPOSITORY.md).
+> This repository is a **product and engineering showcase**, not the complete application source. This README describes the prepared **0.8.4.2 release package**. Updating this page does not deploy that package or establish which version is running at the app link. Supporting documents and media in this repository include historical 0.7 material; they are labeled as historical below.
 
 ## Why Ardiment exists
 
@@ -41,6 +38,91 @@ Its progression layer makes completed work visible through XP, levels, ranks, an
 | Clarity | Continuity | Control |
 | :--- | :--- | :--- |
 | A real next step, with enough context to begin. | The same task across lists, courses, calendar, and Focus. | A detailed dashboard, a few choices, or one action. |
+
+## What's new in 0.8.4.2
+
+**Study for an exam. Review a chapter. Learn something normally. The plan should match the goal.**
+
+- **Two purposes:** exam preparation becomes one **Boss Quest** plan; ordinary learning, reading, practice or revision becomes a **Main Quest** plan.
+- **One subject at a time:** creating or rescheduling from a subject card affects that plan. A separate global action coordinates active plans.
+- **Consistent plan rewards:** estimated total effort and plan type determine a plan's XP, distributed across its sessions. Splitting the same work into more sessions does not increase its reward.
+- **Clear dates:** scheduled sessions appear under their dates. Work that cannot fit stays visibly queued inside its plan instead of cluttering the daily list without a date.
+- **Useful names:** task titles include the subject plus the chapter or activity.
+- **Protected progress:** completed, started, partially completed and pinned sessions retain their protected state. Scheduling itself awards no XP.
+- **A quieter interface:** compact Command actions, hover/focus labels, accessible names, softer surfaces and restrained button depth preserve the familiar navy, cyan and violet identity.
+
+## Study Studio: from a goal to daily work
+
+Describe what you need in one conversation: subject, chapters, readiness, difficult topics, target date and available time. Gemini interprets the request for review; Ardiment's scheduler places accepted work around recorded commitments.
+
+> **Regular study example:** Review Heat Transfer chapters 1–2 for 30 minutes total. This is normal revision, not an exam. Finish by November 12. I already know the fundamentals.
+
+A short revision request should stay a short revision plan. Ordinary study does not automatically acquire mock exams or a full exam-preparation sequence. Its target date is a completion goal, not a fictional exam event. Missing dates or essential details prompt clarification.
+
+For an exam, provide the real date and syllabus. Explicit chapter ranges inform learning units, practice and recall. “More” exposes topics, planned effort and remaining work. Distinct course accents make subjects easier to recognize.
+
+### One plan, connected views
+
+The parent mission stays in Study and the dedicated **Study plans** view in Quests. Its dated sessions also appear under their scheduled days. A plan gives you the full picture; a daily session gives you something manageable to do next.
+
+A session can describe the subject, chapter, activity, expected effort and remaining work. The **More** view provides context when you need it, while the collapsed view stays compact enough to scan.
+
+If work cannot fit, it stays visible inside the plan with a scheduling action. You can adjust availability, change an appropriate target date or explicitly choose a date. An unfinished session should remain understandable, not disappear into a confusing list.
+
+**For older undated planner tasks:** choose **Reschedule plan** on the relevant subject, review and apply. Started or otherwise protected work may need a manual date. There is no need to delete the plan or erase completed progress.
+
+### Different goals deserve different plans
+
+| Your goal | What the experience should support |
+| --- | --- |
+| Prepare for a midterm | A connected exam plan with learning, practice and revision. |
+| Review familiar chapters | A focused review plan without unnecessary introductory work. |
+| Learn a topic normally | A regular-study plan with a clear scope and completion target. |
+| Practise difficult material | Specific practice sessions and room to revisit weak areas. |
+| Balance several subjects | A combined view of upcoming study, with individual subject control. |
+| Continue a partly completed plan | Retain finished work and make the remaining work clear. |
+
+Study durations remain estimates. Better descriptions, realistic availability and honest readiness make a plan more useful. The planner cannot know unrecorded commitments or guarantee mastery.
+
+### Progress across the whole plan
+
+Exam preparation is presented as one Boss Quest plan; ordinary learning is presented as a Main Quest plan. Sessions contribute to the plan’s visible progress and rewards. Completing a session and completing the whole plan are distinct milestones.
+
+Already-earned progress is preserved. A scheduling change does not mean you have completed more work. Reopening a session should reflect that there is work left to do. Public documentation explains these outcomes without exposing the internal calculation rules.
+
+## Today's plan, with room to look ahead
+
+The Command ring shows **today's recorded workload divided by daily capacity**. It does not dump the entire backlog onto today.
+
+| Work | Where it belongs |
+| --- | --- |
+| Work planned today and explicit due-today work | Today's plan, using recorded effort. |
+| Future dated tasks and study sessions | Their own dates in the seven-day outlook. |
+| Preparation suggested for a future deadline | Separately identified suggestions; not silently added to today's ring. |
+| Overdue work | A visible rescheduling backlog; not automatically all charged to today. |
+| Undated work | Outside the daily pressure calculation. |
+| Missing effort or incomplete plans | Explicit uncertainty, rather than fabricated hours. |
+
+Clock overlaps count once where supported. Scheduled study is not allocated again as preparation. Daily capacity is configurable and distinct from the study-only budget. These calculations describe recorded work, not passive time tracking or everything happening in someone's life.
+
+## A calmer workspace
+
+Customizable top shortcuts expose the app's spaces without implying that only three sections exist. A compact profile and XP strip sits above today's plan and upcoming work. Command's secondary actions use icons with hover/focus explanations; New task keeps a clear primary action.
+
+Nine distinct palettes include a muted light theme. Course accents, readable profile initials, consistent action targets and restrained transitions keep the product recognizable across English and Arabic layouts.
+
+## Changes across the 0.8 series
+
+| Release family | Main additions and refinements |
+| --- | --- |
+| **0.8–0.8.1.1** | Coordinated exam planning, workload awareness, progression corrections and interface hardening. |
+| **0.8.2** | Conversational Study Studio, expandable study missions, task-estimate context, shared agendas and calmer presentation. |
+| **0.8.3 series** | Chapter-aware planning, dated study tasks, plan removal/restoration and AI request/response recovery. |
+| **0.8.4** | Separated today's plan from upcoming preparation and overdue backlog; new top navigation. |
+| **0.8.4.1 series** | Compact profile layout, configurable section shortcuts, shared-capacity fixes and cleaner page actions. |
+| **0.8.4.2** | Regular-study versus exam plans, scoped generation, scheduling queues, whole-plan XP and refined controls. |
+
+The 0.8 progression update makes advancement more approachable while preserving earned totals and established names. Other rank requirements still apply. The **Completed** view covers today and the preceding nine local calendar days; it limits presentation, not retention of the underlying history needed for rewards and sync.
 
 ## From ASCEND to Ardiment
 
@@ -56,9 +138,12 @@ The rebrand gives the existing product a consistent identity across its interfac
 
 The app's broader structure remains familiar: tasks, Study, Projects, Focus, Life Systems, progression, and optional collaboration. No new database migration was required for these releases.
 
-Compatibility-sensitive names such as `ascend.*`, `ASCEND1`, and stable application identifiers remain where changing them could break saved data, encrypted recovery, or installations. They are internal compatibility details, not current product branding. [Read the rebrand and continuity notes →](docs/REBRAND.md)
+The rebrand preserves existing work and account continuity. Technical compatibility details are intentionally outside this public overview.
 
-## Inside the current interface
+## Earlier interface reference
+
+<details>
+<summary><strong>Historical 0.7 screenshots — not the 0.8.4.2 interface</strong></summary>
 
 <img src="docs/media/ardiment-desktop-dark.jpg" width="100%" alt="Actual Ardiment desktop interface in dark mode with synthetic demonstration tasks.">
 
@@ -70,6 +155,8 @@ Compatibility-sensitive names such as `ascend.*`, `ASCEND1`, and stable applicat
 </table>
 
 <sub>Actual 0.7 interface captures using synthetic data in an isolated browser fixture. These are not physical-device or production-account tests. The 0.7.1.1 patch only removes the duplicate appearance entry; these captures are not presented as new patch screenshots.</sub>
+
+</details>
 
 ## Three experiences, one workspace
 
@@ -110,15 +197,15 @@ For example, **Heat Transfer Assignment** can contain individual questions. Stud
 
 | Workspace | Purpose | Established behavior |
 | --- | --- | --- |
-| **Command** | Capture work and choose a useful action. | Three experience modes; optional dashboard cards and layout preferences. |
-| **Quests** | Find and execute tasks. | Today, Upcoming, All, saved work, search, compact cards, and expandable details. |
+| **Command** | Capture work and choose a useful action. | Three modes, customizable section shortcuts, compact actions, today’s workload and seven-day outlook. |
+| **Quests** | Find and execute tasks. | Dated groups, Study plans, Completed, saved work, search and expandable details. |
 | **Calendar** | View the same tasks by date. | Four-column date layout, compact tiles, undated work, and controlled scheduling. |
-| **Study** | Keep academic work in context. | Semesters, courses, weekly timetable, study units, course notes, and linked tasks. |
+| **Study** | Keep academic work in context. | Conversational study/exam plans, daily sessions, whole-plan XP, semesters, courses and timetable. |
 | **Focus** | Work on one real task or step. | Completion criteria, optional timing, pause/resume, parked thoughts, and continuity. |
 | **Projects** | Structure larger outcomes. | Required/optional quests, substeps, reviewed AI breakdowns, and gated final objectives. |
 | **Life Systems** | Record routines and personal measures. | Manual check-ins, bounded history, explicit links, and supported one-event Undo. |
 | **Progress** | Keep completed work visible. | XP, levels, ranks, transferable skills, titles, and activity history. |
-| **Friends & Circles** | Coordinate intentionally shared work. | Optional social information and collaboration with separate contribution rules. |
+| **Friends & Circles** | Coordinate intentionally shared work. | Shared agendas, session starters, explicit check-ins and reviewed handoff to personal tasks; separate contribution rules. |
 | **System** | Manage account, privacy, and preferences. | Appearance, recovery/backups, sharing, notifications, help, and version details. |
 
 <details>
@@ -128,7 +215,7 @@ Cards lead with a title, useful context, an unfinished step, and a clear action.
 
 Planned dates and real deadlines are distinct. Rescheduling an eligible planned day does not quietly rewrite a deadline. Daily occurrences and completed history retain their own restrictions.
 
-Focus refers to the canonical task or step. It has no separate task database. Starting a timer earns no XP; parked thoughts and session timing remain device-local. Reconciliation can account for a step completed elsewhere without discarding the session's parked notes.
+Focus opens the original task or step. Starting a timer earns no XP; parked thoughts and session timing remain device-local. Reconciliation can account for a step completed elsewhere without discarding the session's parked notes.
 
 </details>
 
@@ -141,7 +228,7 @@ Life Systems check-ins and measures are records, not sources of personal quest X
 
 Focus Circles and social collaboration are intentionally shared data scopes. They do not grant personal quest XP for coordination alone.
 
-The encrypted external request portal lets someone propose work through an owner-created link. Proposals remain outside Quests until the owner reviews and accepts them. Receiving a request never completes a task or grants rewards.
+The external request portal lets someone propose work through an owner-created link. Proposals remain outside Quests until the owner reviews and accepts them. Receiving a request never completes a task or grants rewards.
 
 </details>
 
@@ -156,7 +243,7 @@ Motion preferences and system reduced-motion settings are respected. Transitions
 
 </details>
 
-[See the current feature reference →](docs/FEATURES.md)
+[Earlier feature reference (0.7 showcase) →](docs/FEATURES.md)
 
 ## Progression with rules
 
@@ -171,115 +258,227 @@ Motion preferences and system reduced-motion settings are respected. Transitions
 
 Repeated completion must not create repeated rewards. Daily quests use date-aware occurrences: finishing today preserves its history and creates the next occurrence, which remains locked until its date. Project final objectives remain gated by required work.
 
-Contextual Undo supports eligible edits, moves, and deletions while respecting newer changes and earned progress. Drafts preserve unfinished capture and AI-console text locally, scoped to the active identity; they are not automatically analyzed or included in ordinary synced progress/backups.
+Contextual Undo supports eligible edits, moves and deletions. Drafts help retain unfinished capture text without automatically submitting it to AI.
 
 The standalone **Guide** and **Milestones** destinations from earlier versions are retired. Useful next-action assistance and progression history remain integrated into the current workspaces.
 
-## Engineering architecture
+## A day with Ardiment
 
-![Many views. One source of truth.](docs/assets/engineering.svg)
+### Start with the day you actually have
 
-Ardiment is a responsive browser PWA built with **HTML, CSS, vanilla JavaScript, Node.js, and Supabase/PostgreSQL**, with optional **Google Gemini** integration. The current application uses a shared service handler adapted for Node/serverless hosting.
+Open Command to see your current progress, today's plan and the shape of the coming days. The point is to understand what belongs today before opening every list.
 
-```mermaid
-flowchart TD
-    Work["Canonical work and earned history"]
-    Work --> Views["Quests, Study, calendar, Projects"]
-    Work --> Next["Deterministic next-action engine"]
-    Next --> Focus["Focus on a real task or step"]
-    Views --> Focus
-    Focus --> Completion["Validated completion and rewards"]
-    Completion --> Work
-```
+If you want control, stay in Full control and arrange the available cards. If you are overwhelmed, switch to a smaller set of choices or one suggested action. Your work stays connected as the presentation changes.
 
-| Layer | Responsibility |
-| --- | --- |
-| Interface/workspace modules | Rendering, capture, navigation, dialogs, localization, and feedback. |
-| Domain modules | Routing, eligibility, recurrence, skills, scheduling, and reconciliation. |
-| Scoped local persistence | Account/Guest separation, cached state, drafts, and pending changes. |
-| Browser cryptography | Private progress, recovery, optional local protection, and encrypted backups. |
-| Node service layer | Validated authenticated operations, provider access, requests, and optional services. |
-| Supabase | Authentication, database persistence, and authorization policies. |
-| PWA shell | Installation metadata, cached resources, and service-worker updates. |
+### Turn a vague intention into something usable
 
-### AI proposes; the user reviews
+“I need to study Heat Transfer” is a starting point. Adding the chapters, target date, available time and what you already know gives the planner something more useful to work with.
 
-Gemini can structure submitted task descriptions and suggest project breakdowns. Manual capture remains available. Local assessment is a deterministic fallback, not an on-device language model equivalent to Gemini.
+For ordinary tasks, a description can become a reviewed task with steps and context. Manual entry remains available when you already know exactly what you want.
 
-The next-action engine uses existing task data and local prioritization; it does not need a fresh generative request to choose every action. Eligibility is checked before ordering work by commitments, deadlines, explicit plans, routines, priority, and supported project context.
+### Begin at the right level
 
-Provider keys stay server-side. Supported private/local analysis settings prevent submission to the external semantic provider; the app's own server may still process requests. Submitted AI content is a separate data path from encrypted cloud progress.
+A project is too broad to be the next action. A study plan may cover several days. Focus helps you work on a specific task or unfinished step without needing to inspect the entire outcome at once.
 
-### Local-first saving and guarded sync
+You can begin, pause and return. Starting is not the same as finishing, and time spent with a timer is not automatically treated as completion.
 
-Local saving and cloud acknowledgement represent different facts. The synchronization layer retains pending work, compares local/remote state against an acknowledged base, and uses conditional writes to avoid blindly replacing concurrent device edits.
+### See what moved forward
 
-The coordinator coalesces rapid changes, serializes reconciliation, retries temporary failures, and avoids unchanged work where possible. Account and operation-generation checks reject stale asynchronous results after a switch or cancellation.
+Record completed work and return to the remaining plan. The Completed view provides a recent daily record, while progression makes sustained activity visible over time.
 
-| Status | Meaning |
-| --- | --- |
-| **Saved on this device** | Work is retained locally; the relevant cloud update is not yet acknowledged. |
-| **Syncing** | Reconciliation is in progress. |
-| **Cloud updated** | A snapshot was acknowledged; newer changes may still be queued. |
-| **Up to date** | Current reconciliation has settled against acknowledged state. |
-| **Recovery/action needed** | Access or synchronization requires attention. |
+If a task was completed by mistake, eligible reopening controls help correct the record. If the schedule changes, revisit the plan instead of pretending that the original dates still fit.
 
-Offline use depends on an available cached shell, accessible saved data, and the relevant unlock state. Sign-in, first-time cloud restoration, and server services still require connectivity. Reconciliation protects tested concurrent cases; it is not a claim that every possible conflict is automatically resolved.
+## Four ways the workspace comes together
 
-## Privacy that explains its boundaries
+<details>
+<summary><strong>For a student managing several courses</strong></summary>
 
-![Protect data. Explain the scope.](docs/assets/privacy.svg)
+Keep courses and class times in Study. Add a study goal with its real scope, then review the proposed daily work. Subject accents distinguish plans; subject names stay visible in session titles.
 
-| Data scope | Protection or boundary |
-| --- | --- |
-| **Private synced progress** | Browser-side AES-GCM before cloud upload, with authenticated access and per-user database policies. |
-| **Optional local Privacy lock** | Encrypted saved application records in that browser, separate password/recovery, and manual/inactivity locking. |
-| **Encrypted backup** | A portable data copy protected by its own export password and validated before confirmed restore. |
-| **Incoming request content** | Client-side content encryption and public-key wrapping, followed by owner review. |
-| **AI submissions** | Explicit submitted content and constrained context; external-provider consent is distinct from sync encryption. |
-| **Friends/Circles and service metadata** | Authorized shared scopes, not the private encrypted progression vault. |
+An exam plan can sit alongside regular revision and coursework. You can open the complete plan when you want context, or work from the dated task list when you need today's sessions.
 
-### Recovery is not a backup
+When another deadline appears, review the timetable again. Completed work remains part of the record. Work that needs more time stays visible rather than being presented as already scheduled.
 
-**The account password signs you in. The Cloud Recovery File unlocks your encrypted progress. A backup contains a separate copy of your data.** Optional local Privacy lock has its own password and Local Recovery File.
+</details>
 
-An old Cloud Recovery File can remain valid if it belongs to the same account vault. It is not a dated snapshot of tasks. The `ASCEND1.` recovery prefix remains intentional after the rebrand. Changing the app's domain creates a separate browser-storage origin, so a new origin may ask for recovery even on a previously used device.
+<details>
+<summary><strong>For someone building a longer project</strong></summary>
 
-[Read the recovery and domain-change guide →](docs/RECOVERY.md)
+Use Projects to describe the outcome and break it into actionable work. Required work and final objectives retain their relationship, while daily execution happens at the task or step level.
 
-Local encryption protects saved data while locked. It cannot protect an unlocked page from malicious code executing in that page, a compromised device, or a malicious future application build. Not every service record is end-to-end encrypted.
+An AI-assisted breakdown can help with the first structure, but you review it before accepting. Links and completion criteria give the next session enough context to begin.
 
-**Ardiment remains a private beta without an independent professional security audit.** Tests document specific behavior; they are not a security certification.
+The goal is to move between the larger outcome and the next useful action without losing the relationship between them.
+
+</details>
+
+<details>
+<summary><strong>For a busy week with changing priorities</strong></summary>
+
+Use planned days to express when you intend to work and deadlines to represent actual commitments. The upcoming view groups dated work so a week does not become one undifferentiated backlog.
+
+Command separates today's plan from the outlook. Overdue work remains visible for rescheduling, and unscheduled ideas do not automatically become today's pressure.
+
+Review the estimates when the picture feels wrong. An indicator is useful only when the tasks, dates and available time behind it reflect your situation.
+
+</details>
+
+<details>
+<summary><strong>For colleagues who want to work together</strong></summary>
+
+Friends and Circles provide optional places for intentionally shared plans and group focus. Shared agendas, session starters and explicit check-ins help turn coordination into an action.
+
+A reviewed handoff can bring relevant work into a personal task list. Personal progress remains distinct from simply participating in a group or coordinating a session.
+
+These features complement individual planning. They are not presented as a full workplace chat, document suite or enterprise project-management service.
+
+</details>
+
+## Designed to stay understandable
+
+**Details when you need them.** A compact card can expand into steps and context. Study missions offer a whole-plan view without requiring every session to remain open.
+
+**Clear actions.** Start, complete, edit, schedule and remove have different purposes. Important actions should communicate what will happen, while icon-only controls retain explanatory labels.
+
+**A familiar identity.** Dark navy, cyan and violet remain central to Ardiment. Softer surfaces and distinct course accents improve scanning without turning the app into a different product.
+
+**A comfortable light theme.** Light mode uses muted surfaces rather than an excessively bright white canvas. Theme choices extend across shared controls, profile elements and readable icons.
+
+**English and Arabic.** Navigation and interface copy support both languages. The brand name stays Ardiment, and personal task text remains as written.
+
+**Motion with restraint.** Transitions help explain navigation and changes. Reduced-motion preferences are respected; visual feedback should support the work rather than compete with it.
+
+**Control over the workspace.** Section shortcuts and dashboard preferences let you choose what stays visible. You can keep a fuller overview or reduce the amount of information competing for attention.
+
+## Questions people may have
+
+<details>
+<summary><strong>Is Ardiment only for students?</strong></summary>
+
+No. Study is a dedicated workspace, but the app also covers personal tasks, projects, routines, planning and progression. Academic work can live alongside other responsibilities without defining the whole product.
+
+</details>
+
+<details>
+<summary><strong>Do I need an exam to use the study planner?</strong></summary>
+
+No. Regular learning, practice and revision are supported. Describe the intended scope and target completion date. Review the plan type before accepting it so normal study is not treated as an exam.
+
+</details>
+
+<details>
+<summary><strong>Can I use it without AI?</strong></summary>
+
+Manual task capture and established organization workflows remain available. New AI-generated study content and conversational interpretation require the relevant online service and consent. AI assistance does not replace reviewing the result.
+
+</details>
+
+<details>
+<summary><strong>Does the workload percentage measure my actual stress?</strong></summary>
+
+No. It summarizes recorded planned work against available time. It is not a medical, emotional or passive activity measurement. Missing tasks, inaccurate estimates or unrecorded commitments can change how representative it is.
+
+</details>
+
+<details>
+<summary><strong>What happens if a study plan cannot fit?</strong></summary>
+
+The remaining sessions stay visible inside the plan as work needing a time slot. Review the scope, target date and availability. You can then reschedule or explicitly set a date instead of losing those sessions.
+
+</details>
+
+<details>
+<summary><strong>Does Complete all finish every task?</strong></summary>
+
+No. It applies to the selected task and its remaining steps. It is useful when the work is already finished and checking each step separately would be unnecessary.
+
+</details>
+
+<details>
+<summary><strong>Will changing appearance reset my work?</strong></summary>
+
+Appearance and experience modes change how the workspace is presented. They do not create a separate set of tasks or intentionally reset earned history.
+
+</details>
+
+<details>
+<summary><strong>Does the recent Completed view delete my old progress?</strong></summary>
+
+No. The recent view focuses on the last ten local calendar days. Older underlying history is retained where needed for progression and continuity.
+
+</details>
+
+<details>
+<summary><strong>Is it available as a native iPhone app?</strong></summary>
+
+The current product is an installable web app. Native App Store distribution is a separate future release effort, not a capability claimed by this README.
+
+</details>
+
+<details>
+<summary><strong>Is this repository the complete current application?</strong></summary>
+
+No. This repository is the public showcase. This README describes the prepared 0.8.4.2 application release; the running deployment and historical supporting files may represent different versions.
+
+</details>
+
+## Built for continuity
+
+Ardiment is an installable web app designed to keep related work connected across its views. The task opened from a course, a date or a plan remains the same piece of work. Completing it should be reflected wherever that work appears.
+
+### Saving and synchronization
+
+Guest mode provides a device-local workspace. Account features support saving and synchronization across supported devices when configured and available. The interface distinguishes locally saved work, synchronization in progress and acknowledged cloud updates.
+
+Offline availability depends on the app and relevant data already being available on the device. First-time sign-in, account restoration and online AI assistance require connectivity. A status indicator helps explain when further action is needed.
+
+### Privacy in everyday use
+
+- AI assistance is optional, and submissions are reviewed through the relevant consent flow.
+- Account, backup and recovery controls are available in System.
+- Sharing with other people is an intentional action, separate from ordinary private task management.
+- Guest mode and account mode have different saving and synchronization expectations.
+- Technical reports can be inspected before sharing; reporting a problem should not require publishing a personal task list.
+
+**A password, a recovery file and a backup serve different purposes.** Keep recovery material and backups private. The app’s help and recovery guidance explain which item is needed for a particular action.
+
+This public showcase deliberately omits internal algorithms, reward calculations, storage identifiers, database structure, operational configuration and security implementation details. Ardiment remains a private beta; no independent security certification is claimed.
 
 ## Verification
 
-<img src="docs/assets/verification.svg" width="100%" alt="0.7.1.1: 24 automated suites passed. 0.7: sampled English/Arabic interface QA. Live device and production acceptance remain separate.">
+The following results belong to the prepared **0.8.4.2 application package**, tested locally on November 8, 2026. They are not tests of this documentation repository or proof of the live deployment.
 
-| Evidence | Version and scope |
+| Evidence | Scope |
 | --- | --- |
-| **24 suites in `npm test` passed** | 0.7.1.1 full static, unit, crypto, and mocked-service regression command. |
-| **Changed JavaScript syntax checked** | 0.7.1.1 appearance-settings patch. |
-| **Complete-all regressions** | Partial completion, repeated activation, remaining XP, protected finals, future daily tasks, recurrence, and unrelated data preservation. |
-| **Installation/cache checks** | Stable manifest identity, Ardiment display names, versioned shell, and offline asset aliases. |
-| **Sampled actual-interface QA** | 0.7: English desktop at 1280px; Arabic tablet at 820px; Arabic light-mode phone at 375px, using synthetic browser-fixture data. |
-| **Access and task interaction checks** | 0.7: viewport-sized restore gate, inert background, compact calendar/menu samples, and real keyboard activation of Complete all. |
+| **37 automated suites passed** | Application regression checks covering core workflows, planning, progression, continuity and simulated service responses. |
+| **15 new study checks passed** | Study purpose, consistent rewards, preserved progress, selected-subject planning and scheduling constraints. |
+| **15 browser integration checks passed** | Synthetic-data browser workflows covering study creation, completion, reopening, editing and scheduling. |
+| **Responsive samples** | English/dark desktop and tablet; Arabic/light Study at 375 px and Command at 320 px. No detected horizontal/field overflow or broken images in audited views. |
+| **Nine theme samples** | No detected overflow; sampled text, profile initials and button-base contrast; data unchanged by theme switching. |
+| **Toolbar interactions** | Search, New task, Customize and Cloud/sync settings opened the intended surfaces. The sync settings card remained visible. |
 
-The 0.7 interface captures and observations remain evidence for that release. The small 0.7.1.1 patch was checked through the regression suite and source/syntax review; a fresh physical-device/browser acceptance pass was not performed for it.
+Final focused smoke and study checks passed after the last CSS/copy refinements. Detailed verification accompanies the application release. These results describe the prepared package, not a claim that the live deployment has passed the same acceptance checks.
 
-**Not established by these checks:** live Supabase account/policy behavior, real cross-device sync after a domain change, physical iPhone/iPad Safari installation, background push delivery, live AI requests, production FPS, complete accessibility, or independent security assurance. Historical 0.6.x benchmark/browser totals are not presented as current-release results.
+**Still requires real-world acceptance:** live Gemini/model configuration, production Supabase login and cross-device sync, physical iPhone/iPad Safari/PWA installation and updates, real background notifications, and complete accessibility testing. No independent professional security audit or App Store certification is claimed.
 
-[Verification details →](docs/VERIFICATION.md)
+[Historical verification reference →](docs/VERIFICATION.md)
 
-## Known issues and next validation
+## Availability and release status
 
-| Item | Current status |
-| --- | --- |
-| **Login bot-verification overlap** | User-reported on iPad and desktop: the Cloudflare widget overlaps security-check copy. Recorded for a later fix; **not fixed in 0.7.1.1**. |
-| **Physical-device installation and offline updates** | Further acceptance testing required, including icon/name refresh behavior. |
-| **Background reminders** | Depend on server setup, scheduling, device support, and per-device permission; real delivery requires device testing. |
-| **Live account and sync acceptance** | Separate from mocked regression results; verify in the owner's deployment. |
+Ardiment is an **installable web app in private beta**, not yet a native App Store release. Its responsive layout, touch-friendly controls, motion preferences and installation experience support everyday use across desktop, tablet and phone.
 
-[Tracked issues and acceptance criteria →](docs/KNOWN-ISSUES.md)
+The latest prepared application release described here is **0.8.4.2**. The deployed app may be running a different version; check the version shown inside Ardiment. Editing this README changes the showcase, not the running app.
+
+The direction is a more complete mobile product while retaining the flexibility of the web workspace. Native packaging, store submission and real-device acceptance remain separate work.
+
+## Remaining validation
+
+- Test the owner’s real Gemini configuration and representative study requests after deployment.
+- Verify login, recovery and encrypted sync between actual devices.
+- Check iPhone/iPad installation, offline updates and notification permissions/delivery.
+- Continue accessibility, layout and scheduling edge-case testing with real use.
+
+Older issue documents describe the state of their original release. An issue’s absence from this README is not proof that every historical case has been retested.
 
 ## Built through use and iteration
 
@@ -289,33 +488,17 @@ The recurring challenges are concrete: several views must refer to the same work
 
 The working process is to define a behavior, exercise it, reproduce failures, make a targeted change, and check what must survive. The rebrand follows the same principle: evolve the product's identity while preserving the work people already recorded.
 
-## Project reference
+## About this showcase
 
-| Reference | Contents |
-| --- | --- |
-| [Features](docs/FEATURES.md) | Implemented capabilities, retained decisions, and setup-dependent behavior. |
-| [Rebrand](docs/REBRAND.md) | ASCEND → Ardiment, compatibility exceptions, and domain continuity. |
-| [Release notes](docs/RELEASES.md) | 0.6.5.5.3 baseline, 0.7 rebrand, and 0.7.1.1 refinement. |
-| [Brand](docs/BRAND.md) | Naming, colors, typography, logo usage, and editable assets. |
-| [Recovery](docs/RECOVERY.md) | Passwords, files, backups, and the retained recovery prefix. |
-| [Verification](docs/VERIFICATION.md) | What was checked and what remains unverified. |
-| [Known issues](docs/KNOWN-ISSUES.md) | Open layout issue and pending acceptance areas. |
-| [Repository scope](docs/REPOSITORY.md) | Current documentation versus historical public source and images. |
+This page describes the product's visible experience and latest prepared release. Older supporting media and documents remain in the repository for historical context; they should not be mistaken for current screenshots, a complete application package or a public technical specification.
 
-<details>
-<summary><strong>Maintainer: publishing this showcase</strong></summary>
+The public description intentionally focuses on what people can do with Ardiment, how the workspaces connect and what has actually been checked. Private operational information and internal implementation rules are outside its scope.
 
-Upload the root `README.md` and the accompanying `docs` folder together, preserving relative paths. The kit includes current illustrations, actual synthetic-data interface captures, editable brand assets, and English/Arabic upload instructions.
 
-The existing historical source folder is not a current-release installation package. This documentation kit does not change application runtime files, deployment settings, authentication configuration, or repository visibility/license settings.
-
-See [upload instructions](UPLOAD.md), [Arabic instructions](UPLOAD-AR.md), and [suggested repository metadata](REPOSITORY-SETTINGS.md). No domain, account, or repository name is changed by adding these files.
-
-</details>
 
 ---
 
-<img src="docs/assets/footer.svg" width="100%" alt="Ardiment. Your work. Your system. Your progression. Private beta 0.7.1.1.">
+**Ardiment · Private beta 0.8.4.2**
 
 <div align="center">
 
