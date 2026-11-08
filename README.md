@@ -18,60 +18,58 @@ Tasks. Study. Projects. Daily routines. One connected workspace.
 
 [See the workspace](#see-the-workspace) · [What’s new](#whats-new-in-0842) · [The experience](#three-experiences-one-workspace) · [Continuity](#built-for-continuity) · [Verification](#verification)
 
-<sub>Created and directed by <a href="https://github.com/HassanAsali">Hassan Asali</a> · AI-assisted development · Private beta</sub>
+<sub>Independent product · AI-assisted development · Private beta</sub>
 
 </div>
 
-## Why I’m building Ardiment
+## Built for days with a lot going on
 
-I wanted somewhere to put the things that actually fill my day: assignments, exams, projects, personal tasks and everything in between.
+A task list can hold everything and still leave one question unanswered: **what should I actually do next?**
 
-But writing everything down is only the beginning. I still need to know what to work on today, how much time it might take, and whether I am leaving enough room for what comes next.
+Ardiment brings tasks, study, projects and routines into one connected workspace. See what belongs today, understand what is approaching and open a clear next step without digging through every list.
 
-That is what I want Ardiment to do well.
+The aim is straightforward: **less scattered work, a clearer plan, and progress you can see.**
 
-**Give me a clear picture. Give me a useful next step. Let me see the work I have actually finished.**
-
-I use the app myself. When something feels confusing, looks crowded or gives an unrealistic picture of my day, it becomes something to improve. The aim is a workspace that feels calm and polished while handling real responsibilities.
-
-Ardiment was previously known as **ASCEND**. The name changed; the work and progression stayed connected.
+Ardiment was previously known as **ASCEND**. The name changed; existing work and progression stayed connected.
 
 ## See the workspace
 
 ### Your day, without losing the bigger picture
 
-<img src="docs/media/ardiment-0.8.4.2-command.jpg" width="100%" alt="Ardiment 0.8.4.2 Command Center showing a compact profile, today's workload ring and a seven-day outlook with synthetic demonstration data.">
+<img src="docs/assets/walkthrough-command.svg" width="100%" alt="Illustrative guide: today’s planned work and a separate seven-day outlook using fictional data.">
 
 **Today has its own plan. The rest of the week has its own place.**
 
 Command brings your current work, upcoming commitments and progression together. The circular indicator describes recorded work against available time; the outlook helps you see what is approaching without treating the whole backlog as today's job.
 
-<sub>Actual 0.8.4.2 browser capture with synthetic demonstration data. The sample deliberately shows an over-capacity day; these are not a real user's tasks or a prediction of your workload.</sub>
+<sub>Illustrative product guide with fictional examples. Not an application screenshot or live-service test.</sub>
 
 ### A study plan you can actually work through
 
-<img src="docs/media/ardiment-0.8.4.2-study.jpg" width="100%" alt="Ardiment Study Studio with a Heat Transfer exam Boss Quest and a Thermodynamics regular-study Main Quest, distinct course accents and a conversational planning field.">
+<img src="docs/assets/walkthrough-study.svg" width="100%" alt="Illustrative guide: Course A exam preparation, Course B regular study, and example learning steps.">
 
 **Tell it what you need to study. Keep the subject, the sessions and the progress connected.**
 
 An exam and a normal review session are different goals. Study Studio gives each a clear place, with subject accents, plan-level progress and access to the daily work. The example above shows an exam plan alongside regular revision.
 
-<sub>Actual 0.8.4.2 interface with synthetic plans. This browser demonstration is not evidence of a live Gemini request.</sub>
+<sub>Illustrative product guide with fictional examples. Not an application screenshot or live-service test.</sub>
 
 <details>
-<summary><strong>Prefer a softer light theme? See the same workspace.</strong></summary>
+<summary><strong>A softer palette, with a clear role for each action</strong></summary>
 
-<img src="docs/media/ardiment-0.8.4.2-light.jpg" width="100%" alt="The same Ardiment Command Center in its muted light theme, with soft grey surfaces and restrained teal and violet accents.">
+<img src="docs/assets/walkthrough-light.svg" width="100%" alt="Illustrative guide: capture, plan, focus and complete in a muted light palette.">
 
 Light mode keeps the same structure with muted surfaces and quieter contrast. The goal is a comfortable workspace, not a screen full of bright white panels.
 
-<sub>Actual 0.8.4.2 browser capture with synthetic demonstration data.</sub>
+<sub>Illustrative product guide with fictional examples. Not an application screenshot or live-service test.</sub>
 
 </details>
 
 > **About this showcase:** This page presents the prepared **0.8.4.2** release. The repository is a public product showcase, not the complete current application source. Release checks and remaining validation are documented below.
 
 ## What's new in 0.8.4.2
+
+![Release](https://img.shields.io/badge/Release-65D8E8?style=flat-square&labelColor=0B1825)
 
 **An exam needs preparation. A quick review needs focus. The app should know the difference.**
 
@@ -85,9 +83,11 @@ Light mode keeps the same structure with muted surfaces and quieter contrast. Th
 
 ## Study Studio: from a goal to daily work
 
+![Study](https://img.shields.io/badge/Study-B5A1DE?style=flat-square&labelColor=0B1825)
+
 Describe what you need in one conversation: subject, chapters, readiness, difficult topics, target date and available time. Gemini interprets the request for review; Ardiment's scheduler places accepted work around recorded commitments.
 
-> **Regular study example:** Review Heat Transfer chapters 1–2 for 30 minutes total. This is normal revision, not an exam. Finish by November 12. I already know the fundamentals.
+> **Regular study example:** Review Course A chapters 1–2 for 30 minutes total. This is normal revision, not an exam. Finish by November 12. I already know the fundamentals.
 
 A short revision request should stay a short revision plan. Ordinary study does not automatically acquire mock exams or a full exam-preparation sequence. Its target date is a completion goal, not a fictional exam event. Missing dates or essential details prompt clarification.
 
@@ -124,6 +124,8 @@ Already-earned progress is preserved. A scheduling change does not mean you have
 
 ## Today's plan, with room to look ahead
 
+![Planning](https://img.shields.io/badge/Planning-65D8E8?style=flat-square&labelColor=0B1825)
+
 The Command ring shows **today's recorded workload divided by daily capacity**. It does not dump the entire backlog onto today.
 
 | Work | Where it belongs |
@@ -138,6 +140,8 @@ The Command ring shows **today's recorded workload divided by daily capacity**. 
 Clock overlaps count once where supported. Scheduled study is not allocated again as preparation. Daily capacity is configurable and distinct from the study-only budget. These calculations describe recorded work, not passive time tracking or everything happening in someone's life.
 
 ## A calmer workspace
+
+![Appearance](https://img.shields.io/badge/Appearance-9BC5AF?style=flat-square&labelColor=0B1825)
 
 Customizable top shortcuts expose the app's spaces without implying that only three sections exist. A compact profile and XP strip sits above today's plan and upcoming work. Command's secondary actions use icons with hover/focus explanations; New task keeps a clear primary action.
 
@@ -198,11 +202,13 @@ The rebrand preserves existing work and account continuity. Technical compatibil
 5. **Complete:** record the actual work; eligible progression follows the task's rules.
 6. **Continue:** return to the remaining work or choose another useful action.
 
-For example, **Heat Transfer Assignment** can contain individual questions. Study supplies the course context, the calendar shows the planned day, and Focus can present **Solve Question 2**. Finishing it updates the original assignment. If the whole assignment is already done, **Complete all** finishes that task's remaining steps together.
+For example, **Course A Assignment** can contain individual questions. Study supplies the course context, the calendar shows the planned day, and Focus can present **Solve Question 2**. Finishing it updates the original assignment. If the whole assignment is already done, **Complete all** finishes that task's remaining steps together.
 
 > **Complete all applies to one task and its steps.** It does not mark the entire task list complete. Already-earned step rewards are preserved; locked project finals and future daily occurrences remain protected.
 
 ## Product workspaces
+
+![Workspace](https://img.shields.io/badge/Workspace-65D8E8?style=flat-square&labelColor=0B1825)
 
 <picture>
   <source media="(max-width: 640px)" srcset="docs/assets/workspace-map-mobile.svg">
@@ -261,6 +267,8 @@ Motion preferences and system reduced-motion settings are respected. Transitions
 
 ## Progress you can see
 
+![Progress](https://img.shields.io/badge/Progress-D7B88B?style=flat-square&labelColor=0B1825)
+
 | Interaction | Personal progression |
 | --- | --- |
 | Finish an eligible quest or rewarded step | Applied through the task's completion rules. |
@@ -286,7 +294,7 @@ If you want control, stay in Full control and arrange the available cards. If yo
 
 ### Turn a vague intention into something usable
 
-“I need to study Heat Transfer” is a starting point. Adding the chapters, target date, available time and what you already know gives the planner something more useful to work with.
+“I need to study Course A” is a starting point. Adding the chapters, target date, available time and what you already know gives the planner something more useful to work with.
 
 For ordinary tasks, a description can become a reviewed task with steps and context. Manual entry remains available when you already know exactly what you want.
 
@@ -350,19 +358,19 @@ These features complement individual planning. They are not presented as a full 
 
 ## Designed to stay understandable
 
-**Details when you need them.** A compact card can expand into steps and context. Study missions offer a whole-plan view without requiring every session to remain open.
+**🟣 Details when you need them.** A compact card can expand into steps and context. Study missions offer a whole-plan view without requiring every session to remain open.
 
-**Clear actions.** Start, complete, edit, schedule and remove have different purposes. Important actions should communicate what will happen, while icon-only controls retain explanatory labels.
+**🔵 Clear actions.** Start, complete, edit, schedule and remove have different purposes. Important actions should communicate what will happen, while icon-only controls retain explanatory labels.
 
-**A familiar identity.** Dark navy, cyan and violet remain central to Ardiment. Softer surfaces and distinct course accents improve scanning without turning the app into a different product.
+**🟣 A familiar identity.** Dark navy, cyan and violet remain central to Ardiment. Softer surfaces and distinct course accents improve scanning without turning the app into a different product.
 
-**A comfortable light theme.** Light mode uses muted surfaces rather than an excessively bright white canvas. Theme choices extend across shared controls, profile elements and readable icons.
+**🟢 A comfortable light theme.** Light mode uses muted surfaces rather than an excessively bright white canvas. Theme choices extend across shared controls, profile elements and readable icons.
 
-**English and Arabic.** Navigation and interface copy support both languages. The brand name stays Ardiment, and personal task text remains as written.
+**🔵 English and Arabic.** Navigation and interface copy support both languages. The brand name stays Ardiment, and personal task text remains as written.
 
-**Motion with restraint.** Transitions help explain navigation and changes. Reduced-motion preferences are respected; visual feedback should support the work rather than compete with it.
+**🟢 Motion with restraint.** Transitions help explain navigation and changes. Reduced-motion preferences are respected; visual feedback should support the work rather than compete with it.
 
-**Control over the workspace.** Section shortcuts and dashboard preferences let you choose what stays visible. You can keep a fuller overview or reduce the amount of information competing for attention.
+**🟠 Control over the workspace.** Section shortcuts and dashboard preferences let you choose what stays visible. You can keep a fuller overview or reduce the amount of information competing for attention.
 
 ## A few things worth knowing
 
@@ -438,6 +446,8 @@ No. This repository is the public showcase. This README describes the prepared 0
 
 ## Built for continuity
 
+![Continuity](https://img.shields.io/badge/Continuity-9BC5AF?style=flat-square&labelColor=0B1825)
+
 Ardiment is an installable web app designed to keep related work connected across its views. The task opened from a course, a date or a plan remains the same piece of work. Completing it should be reflected wherever that work appears.
 
 ### Saving and synchronization
@@ -459,6 +469,8 @@ Offline availability depends on the app and relevant data already being availabl
 This public showcase deliberately omits internal algorithms, reward calculations, storage identifiers, database structure, operational configuration and security implementation details. Ardiment remains a private beta; no independent security certification is claimed.
 
 ## Verification
+
+![Checked scope](https://img.shields.io/badge/Checked_scope-B5A1DE?style=flat-square&labelColor=0B1825)
 
 The following results belong to the prepared **0.8.4.2 application package**, tested locally on November 8, 2026. They are not tests of this documentation repository or proof of the live deployment.
 
@@ -494,21 +506,17 @@ The direction is a more complete mobile product while retaining the flexibility 
 
 Older issue documents describe the state of their original release. An issue’s absence from this README is not proof that every historical case has been retested.
 
-## Built, used, questioned, improved
+## Built through use and iteration
 
-I am **Hassan Asali**, a Mechanical Engineering student, and Ardiment is a product I am building around work I actually need to get done.
+Ardiment is an independent, **AI-assisted development project**. Product decisions, everyday use and testing guide each iteration; AI tools assist with much of the implementation.
 
-I care about the details: a study session should say which subject it belongs to. A workload indicator should help me understand my day. A button should do something useful. The interface should feel good to use without getting in the way.
+The focus stays practical: task titles should make sense, plans should remain connected, controls should be clear and progress should reflect completed work.
 
-That is also how the app improves. I use it, notice what feels wrong, define the behavior I need and work through the next iteration. Some changes are visual. Others are about making the underlying experience more reliable.
-
-Development is **AI-assisted**. AI tools produce much of the implementation code; I direct the product, define priorities, review the results and test it through everyday use. This is an actively developing private beta, and the verification section separates local evidence from what still needs real-world testing.
-
-**The standard I’m working toward is simple: useful enough to rely on, clear enough to understand, and polished enough to enjoy opening.**
+This is an actively developing private beta. The verification section distinguishes local checks from the real-world acceptance still needed.
 
 ## About this showcase
 
-This page describes the product's visible experience and latest prepared release. Older supporting media and documents remain in the repository for historical context; they should not be mistaken for current screenshots, a complete application package or a public technical specification.
+This page describes the product's visible experience and latest prepared release. The visual guides on this page use fictional courses, tasks and schedules. They explain the experience; they are not interface captures. Older supporting documents remain historical references.
 
 The public description intentionally focuses on what people can do with Ardiment, how the workspaces connect and what has actually been checked. Private operational information and internal implementation rules are outside its scope.
 
