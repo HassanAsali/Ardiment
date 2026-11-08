@@ -16,7 +16,7 @@ Tasks. Study. Projects. Daily routines. One connected workspace.
 
 **See what matters today. Know what is coming. Make your progress count.**
 
-[See the workspace](#see-the-workspace) · [What’s new](#whats-new-in-0842) · [The experience](#three-experiences-one-workspace) · [Continuity](#built-for-continuity) · [Verification](#verification)
+[Open Ardiment · Private beta](https://ardiment-beta-nine.vercel.app) · [See the workspace](#see-the-workspace) · [What’s new](#whats-new-in-0842) · [The experience](#three-experiences-one-workspace) · [Continuity](#built-for-continuity) · [Verification](#verification)
 
 <sub>Independent product · AI-assisted development · Private beta</sub>
 
